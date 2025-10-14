@@ -1,3 +1,4 @@
+import 'package:clinic_booking_app/features/auth/presentation/views/widgets/login_view_body.dart';
 import 'package:flutter/material.dart';
 
 class LoginView extends StatelessWidget {
@@ -6,7 +7,7 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(child: Text('login screen')),
+      body: SafeArea(child: LoginViewBody()),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:clinic_booking_app/core/themes/app_color.dart';
 import 'package:clinic_booking_app/features/onboarding/data/models/onboarding_model.dart';
 import 'package:flutter/material.dart';
 
@@ -10,30 +11,30 @@ class OnBoardingBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.end,
       crossAxisAlignment: CrossAxisAlignment.center,
       spacing: 10,
       children: [
         Image(image: AssetImage(item[index].imageUrl)),
-        const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
-            spacing: 17,
+            spacing: 8,
             children: [
               Text(
                 item[index].title,
-                style: Theme.of(context).textTheme.titleLarge,
+                style: Theme.of(
+                  context,
+                ).textTheme.displayMedium!.copyWith(color: AppColors.grey700),
               ),
               Text(
                 item[index].description,
                 textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: Colors.grey[400],
-                  height: 1.5,
-                  letterSpacing: 0.3,
-                ),
+                style: Theme.of(
+                  context,
+                ).textTheme.labelSmall!.copyWith(color: AppColors.grey500),
               ),
+              const SizedBox(height: 6),
             ],
           ),
         ),
