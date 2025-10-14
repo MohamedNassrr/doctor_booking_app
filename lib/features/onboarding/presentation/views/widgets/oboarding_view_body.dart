@@ -26,8 +26,8 @@ class _OboardingViewBodyState extends State<OboardingViewBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SkipButton(),
         Expanded(
           child: PageView.builder(
             controller: onBoardingController,
@@ -54,6 +54,7 @@ class _OboardingViewBodyState extends State<OboardingViewBody> {
           onBoardingItems: item,
           isLast: isLast,
         ),
+         const SkipButton(),
       ],
     );
   }

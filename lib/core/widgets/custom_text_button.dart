@@ -1,4 +1,4 @@
-import 'package:clinic_booking_app/constance.dart';
+import 'package:clinic_booking_app/core/themes/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,10 +18,10 @@ class CustomTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 48.h,
-      decoration: const BoxDecoration(
-        color: primaryColor,
-        borderRadius: BorderRadius.all(Radius.circular(14)),
+      height: 45.h,
+      decoration:  const BoxDecoration(
+        color: AppColors.mainColor,
+        borderRadius: BorderRadius.all(Radius.circular(63)),
       ),
       child: TextButton(
         onPressed: onPressed,
@@ -31,10 +31,7 @@ class CustomTextButton extends StatelessWidget {
               )
             : Text(
                 title,
-                style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
+                style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white),
               ),
       ),
     );
