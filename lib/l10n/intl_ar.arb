@@ -1,1 +1,17 @@
-{}
+{
+  "hopeYouAreDoingFine": "نأمل أن تكون بخير.",
+  "hiWelcomeBack": "مرحباً، أهلاً بعودتك",
+  "yourEmail": "بريدك الإلكتروني",
+   "emailCantBeEmpty": "البريد الإلكتروني لا يمكن أن يكون فارغاً",
+  "pleaseEnterValidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+  "password": "كلمة المرور",
+  "passwordCantBeEmpty": "كلمة المرور لا يمكن أن تكون فارغة",
+  "passwordTooShort": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+  "or": "أو",
+  "signInWithGoogle": "تسجيل الدخول بواسطة جوجل",
+  "signInWithFacebook": "تسجيل الدخول بواسطة فيسبوك",
+  "forgetPassword": "نسيت كلمة المرور؟",
+  "dontHaveAccount": "ليس لديك حساب بعد؟",
+  "signUp": "التسجيل",
+  "signIn": "تسجيل الدخول"
+}

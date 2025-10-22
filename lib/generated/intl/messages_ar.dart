@@ -21,5 +21,39 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "ليس لديك حساب بعد؟",
+    ),
+    "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني لا يمكن أن يكون فارغاً",
+    ),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "hiWelcomeBack": MessageLookupByLibrary.simpleMessage(
+      "مرحباً، أهلاً بعودتك",
+    ),
+    "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
+      "نأمل أن تكون بخير.",
+    ),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور لا يمكن أن تكون فارغة",
+    ),
+    "passwordTooShort": MessageLookupByLibrary.simpleMessage(
+      "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    ),
+    "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريد إلكتروني صحيح",
+    ),
+    "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة فيسبوك",
+    ),
+    "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة جوجل",
+    ),
+    "signUp": MessageLookupByLibrary.simpleMessage("التسجيل"),
+    "yourEmail": MessageLookupByLibrary.simpleMessage("بريدك الإلكتروني"),
+  };
 }

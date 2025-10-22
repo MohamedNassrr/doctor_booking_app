@@ -1,1 +1,17 @@
-{}
+{
+  "hopeYouAreDoingFine": "Hope you're doing fine.",
+  "hiWelcomeBack": "Hi, Welcome Back!",
+  "yourEmail": "Your Email",
+  "emailCantBeEmpty": "Email can't be empty",
+  "pleaseEnterValidEmail": "Please enter a valid email",
+  "password": "Password",
+  "passwordCantBeEmpty": "Password can't be empty",
+  "passwordTooShort": "Password must be at least 6 characters",
+  "or": "Or",
+  "signInWithGoogle": "Sign In with Google",
+  "signInWithFacebook": "Sign In with Facebook",
+  "forgetPassword": "Forget Password?",
+  "dontHaveAccount": "Don't have an account yet?",
+  "signUp": "Sign Up",
+  "signIn": "Sign In"
+}

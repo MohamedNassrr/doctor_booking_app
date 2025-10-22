@@ -1,13 +1,22 @@
+import 'package:bloc/bloc.dart';
+import 'package:clinic_booking_app/bloc_observer.dart';
 import 'package:clinic_booking_app/core/services/local_storage.dart';
 import 'package:clinic_booking_app/core/themes/themes_data.dart';
 import 'package:clinic_booking_app/core/utils/app_routing.dart';
+import 'package:clinic_booking_app/firebase_options.dart';
+import 'package:clinic_booking_app/generated/l10n.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocalStorage.init();
   await ScreenUtil.ensureScreenSize();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -20,11 +29,25 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp.router(
-        routerConfig: AppRouting.router,
-        debugShowCheckedModeBanner: false,
-        theme: AppTheme.lightTheme,
-        themeMode: ThemeMode.light,
+      child: AnnotatedRegion<SystemUiOverlayStyle>(
+        value: const SystemUiOverlayStyle(
+          statusBarColor: Colors.transparent,
+          statusBarIconBrightness: Brightness.dark,
+        ),
+        child: MaterialApp.router(
+          locale: const Locale('en'),
+          localizationsDelegates: [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          routerConfig: AppRouting.router,
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.lightTheme,
+          themeMode: ThemeMode.light,
+        ),
       ),
     );
   }

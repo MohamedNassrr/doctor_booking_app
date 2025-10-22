@@ -21,5 +21,37 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "Don\'t have an account yet?",
+    ),
+    "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "Email can\'t be empty",
+    ),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "hiWelcomeBack": MessageLookupByLibrary.simpleMessage("Hi, Welcome Back!"),
+    "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
+      "Hope you\'re doing fine.",
+    ),
+    "or": MessageLookupByLibrary.simpleMessage("Or"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "Password can\'t be empty",
+    ),
+    "passwordTooShort": MessageLookupByLibrary.simpleMessage(
+      "Password must be at least 6 characters",
+    ),
+    "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid email",
+    ),
+    "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
+    "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "Sign In with Facebook",
+    ),
+    "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "Sign In with Google",
+    ),
+    "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "yourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
+  };
 }

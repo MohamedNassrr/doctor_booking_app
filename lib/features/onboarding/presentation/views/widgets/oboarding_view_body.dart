@@ -54,7 +54,7 @@ class _OboardingViewBodyState extends State<OboardingViewBody> {
           onBoardingItems: item,
           isLast: isLast,
         ),
-         const SkipButton(),
+        const SkipButton(),
       ],
     );
   }
