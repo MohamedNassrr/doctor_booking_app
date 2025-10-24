@@ -33,28 +33,33 @@ class CustomFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: controller,
-      keyboardType: type,
-      onChanged: onChanged,
-      onFieldSubmitted: onSubmit,
-      obscureText: isPassword,
-      validator: validation,
-      decoration: InputDecoration(
-        focusedBorder: buildOutlineInputBorder(),
-        border: buildOutlineInputBorder(),
-        disabledBorder: buildOutlineInputBorder(),
-        enabledBorder: buildOutlineInputBorder(),
-        hintText: hintText,
-        prefixIcon: Icon(
-          prefix,
-          color: AppColors.grey400,
-          size: 15,
-          ),
-        hintStyle: Theme.of(context).textTheme.labelSmall!.copyWith(color: AppColors.grey400),
-        suffixIcon: suffix != null
-            ? IconButton(onPressed: suffixPressed, icon: Icon(suffix))
-            : null,
+    return SizedBox(
+      height: 45,
+      child: TextFormField(
+      
+        controller: controller,
+        keyboardType: type,
+        onChanged: onChanged,
+        onFieldSubmitted: onSubmit,
+        obscureText: isPassword,
+        validator: validation,
+        decoration: InputDecoration(
+         contentPadding: const EdgeInsets.all(23),
+          focusedBorder: buildOutlineInputBorder(),
+          border: buildOutlineInputBorder(),
+          disabledBorder: buildOutlineInputBorder(),
+          enabledBorder: buildOutlineInputBorder(),
+          hintText: hintText,
+          prefixIcon: Icon(
+            prefix,
+            color: AppColors.grey400,
+            size: 15,
+            ),
+          hintStyle: Theme.of(context).textTheme.labelSmall!.copyWith(color: AppColors.grey400),
+          suffixIcon: suffix != null
+              ? IconButton(onPressed: suffixPressed, icon: Icon(suffix))
+              : null,
+        ),
       ),
     );
   }
@@ -63,6 +68,7 @@ class CustomFormField extends StatelessWidget {
     return OutlineInputBorder(
       borderSide: const BorderSide(color: AppColors.grey300),
       borderRadius: BorderRadius.circular(radius),
+
     );
   }
 }

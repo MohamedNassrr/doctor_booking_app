@@ -22,11 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب بعد؟",
     ),
     "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني لا يمكن أن يكون فارغاً",
+    ),
+    "error_account_exists": MessageLookupByLibrary.simpleMessage(
+      "الحساب موجود بالفعل ببيانات اعتماد مختلفة.",
+    ),
+    "error_generic": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير متوقع. حاول مرة أخرى.",
+    ),
+    "error_network_failed": MessageLookupByLibrary.simpleMessage(
+      "خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت.",
+    ),
+    "error_user_not_found": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد مستخدم بهذا البريد الإلكتروني.",
+    ),
+    "error_wrong_password": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور غير صحيحة.",
     ),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage(
@@ -54,6 +71,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "تسجيل الدخول بواسطة جوجل",
     ),
     "signUp": MessageLookupByLibrary.simpleMessage("التسجيل"),
+    "usernameValidation": MessageLookupByLibrary.simpleMessage(
+      "من فضلك أدخل اسمك",
+    ),
+    "weAreHereToHelpYou": MessageLookupByLibrary.simpleMessage(
+      "نحن هنا لمساعدتك!",
+    ),
     "yourEmail": MessageLookupByLibrary.simpleMessage("بريدك الإلكتروني"),
+    "yourName": MessageLookupByLibrary.simpleMessage("اسمك"),
   };
 }

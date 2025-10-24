@@ -178,6 +178,101 @@ class S {
   String get signIn {
     return Intl.message('Sign In', name: 'signIn', desc: '', args: []);
   }
+
+  /// `No user found for that email.`
+  String get error_user_not_found {
+    return Intl.message(
+      'No user found for that email.',
+      name: 'error_user_not_found',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wrong password provided.`
+  String get error_wrong_password {
+    return Intl.message(
+      'Wrong password provided.',
+      name: 'error_wrong_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Account already exists with different credentials.`
+  String get error_account_exists {
+    return Intl.message(
+      'Account already exists with different credentials.',
+      name: 'error_account_exists',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An unexpected error occurred. Please try again.`
+  String get error_generic {
+    return Intl.message(
+      'An unexpected error occurred. Please try again.',
+      name: 'error_generic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Network error. Please check your internet connection.`
+  String get error_network_failed {
+    return Intl.message(
+      'Network error. Please check your internet connection.',
+      name: 'error_network_failed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your name`
+  String get yourName {
+    return Intl.message('Your name', name: 'yourName', desc: '', args: []);
+  }
+
+  /// `Please enter your name`
+  String get usernameValidation {
+    return Intl.message(
+      'Please enter your name',
+      name: 'usernameValidation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We are here to help you!`
+  String get weAreHereToHelpYou {
+    return Intl.message(
+      'We are here to help you!',
+      name: 'weAreHereToHelpYou',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Account`
+  String get createAccount {
+    return Intl.message(
+      'Create Account',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you have an account?`
+  String get doYouHaveAnAccount {
+    return Intl.message(
+      'Do you have an account?',
+      name: 'doYouHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

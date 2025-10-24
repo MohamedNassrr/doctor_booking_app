@@ -1,11 +1,14 @@
 
 import 'package:clinic_booking_app/core/themes/app_color.dart';
 import 'package:clinic_booking_app/core/utils/assets_data.dart';
-import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class WelcomingText extends StatelessWidget {
-  const WelcomingText({super.key});
+  const WelcomingText({super.key, required this.welcomingText, required this.welcomingDescription});
+
+
+  final String welcomingText;
+  final String welcomingDescription;
 
   @override
   Widget build(BuildContext context) {
@@ -15,14 +18,14 @@ class WelcomingText extends StatelessWidget {
         const Image(image: AssetImage(AssetsData.logo)),
         const SizedBox(height: 24),
         Text(
-          S.of(context).hiWelcomeBack,
+          welcomingText,
           style: Theme.of(context).textTheme.displayLarge!.copyWith(
             fontWeight: FontWeight.w600,
             color: AppColors.deepTeal,
           ),
         ),
         Text(
-          S.of(context).hopeYouAreDoingFine,
+          welcomingDescription,
           style: Theme.of(
             context,
           ).textTheme.labelSmall!.copyWith(color: AppColors.grey500),

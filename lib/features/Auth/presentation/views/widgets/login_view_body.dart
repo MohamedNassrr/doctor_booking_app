@@ -2,9 +2,9 @@ import 'package:clinic_booking_app/core/widgets/custom_divider.dart';
 import 'package:clinic_booking_app/core/widgets/custom_text_button.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/login_cubit/login_state.dart';
-import 'package:clinic_booking_app/features/auth/presentation/views/widgets/advanced_auth.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/widgets/forget_pass_signup_buttons.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/widgets/login_form_fields.dart';
+import 'package:clinic_booking_app/features/auth/presentation/views/widgets/social_auth.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/widgets/welcoming_text.dart';
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +32,34 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<LoginCubit, LoginStates>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state is LoginSuccessState) {}
+        if (state is LoginFailureState) {
+          final l10n = S.of(context);
+          String message;
+
+          switch (state.failure) {
+            case 'user-not-found':
+              message = l10n.error_user_not_found;
+              break;
+            case 'wrong-password':
+              message = l10n.error_wrong_password;
+              break;
+            case 'account-exists-with-different-credential':
+              message = l10n.error_account_exists;
+              break;
+            case 'network-request-failed':
+              message = l10n.error_network_failed;
+              break;
+            default:
+              message = l10n.error_generic;
+          }
+
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text(message)));
+        }
+      },
       builder: (context, state) {
         var loginCubit = context.read<LoginCubit>();
         return SingleChildScrollView(
@@ -43,24 +70,32 @@ class _LoginViewBodyState extends State<LoginViewBody> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const WelcomingText(),
+                  WelcomingText(
+                    welcomingText: S.of(context).hiWelcomeBack,
+                    welcomingDescription: S.of(context).hopeYouAreDoingFine,
+                  ),
                   LoginFormFields(
                     emailController: emailController,
                     passwordController: passwordController,
-                    loginCubit: loginCubit,
                     formKey: formKey,
                   ),
                   const SizedBox(height: 23),
                   CustomTextButton(
+                    isLoading: state is LoginLoadingState,
                     title: S.of(context).signIn,
                     onPressed: () {
-                      if (formKey.currentState!.validate()) {}
+                      if (formKey.currentState!.validate()) {
+                        loginCubit.userLogin(
+                          email: emailController.text,
+                          password: passwordController.text,
+                        );
+                      }
                     },
                   ),
                   const SizedBox(height: 23),
                   const CustomDivider(),
                   const SizedBox(height: 23),
-                  const AdvancedAuth(),
+                  const SocialAuth(),
                   const ForgetPassAndSingUpButtons(),
                 ],
               ),

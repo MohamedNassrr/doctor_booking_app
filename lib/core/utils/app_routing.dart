@@ -1,6 +1,8 @@
 import 'package:clinic_booking_app/core/services/local_storage.dart';
 import 'package:clinic_booking_app/features/Auth/presentation/views/login_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/login_cubit/login_cubit.dart';
+import 'package:clinic_booking_app/features/auth/presentation/views/forget_pass_view.dart';
+import 'package:clinic_booking_app/features/auth/presentation/views/register_view.dart';
 import 'package:clinic_booking_app/features/onboarding/presentation/views/onboaring_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -8,6 +10,8 @@ import 'package:go_router/go_router.dart';
 abstract class AppRouting {
   static const rOnBoarding = '/';
   static const rLogin = '/LoginView';
+  static const rRegister = '/RegisterView';
+  static const rForgtetPass = '/ForgetPassView';
 
   static final router = GoRouter(
     initialLocation: initialLocaton(),
@@ -23,11 +27,20 @@ abstract class AppRouting {
           child: const LoginView(),
         ),
       ),
+      GoRoute(
+        path: rRegister,
+        builder: (context, state) => const RegisterView(),
+      ),
+      GoRoute(
+        path: rForgtetPass,
+        builder: (context, state) => const ForgetPassView(),
+      ),
     ],
   );
 
   static String initialLocaton() {
     final onBoarding = LocalStorage.getData(key: 'onBoarding');
+    //   User? user = FirebaseAuth.instance.currentUser;
     if (onBoarding != null) {
       return rLogin;
     } else {

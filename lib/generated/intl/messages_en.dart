@@ -22,11 +22,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
+    "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage(
+      "Do you have an account?",
+    ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
     ),
     "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
       "Email can\'t be empty",
+    ),
+    "error_account_exists": MessageLookupByLibrary.simpleMessage(
+      "Account already exists with different credentials.",
+    ),
+    "error_generic": MessageLookupByLibrary.simpleMessage(
+      "An unexpected error occurred. Please try again.",
+    ),
+    "error_network_failed": MessageLookupByLibrary.simpleMessage(
+      "Network error. Please check your internet connection.",
+    ),
+    "error_user_not_found": MessageLookupByLibrary.simpleMessage(
+      "No user found for that email.",
+    ),
+    "error_wrong_password": MessageLookupByLibrary.simpleMessage(
+      "Wrong password provided.",
     ),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage("Hi, Welcome Back!"),
@@ -52,6 +71,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Sign In with Google",
     ),
     "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+    "usernameValidation": MessageLookupByLibrary.simpleMessage(
+      "Please enter your name",
+    ),
+    "weAreHereToHelpYou": MessageLookupByLibrary.simpleMessage(
+      "We are here to help you!",
+    ),
     "yourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
+    "yourName": MessageLookupByLibrary.simpleMessage("Your name"),
   };
 }

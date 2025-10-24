@@ -2,6 +2,7 @@ import 'package:clinic_booking_app/core/widgets/custom_form_field.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/login_cubit/login_cubit.dart';
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginFormFields extends StatelessWidget {
@@ -9,17 +10,17 @@ class LoginFormFields extends StatelessWidget {
     super.key,
     required this.emailController,
     required this.passwordController,
-    required this.loginCubit,
     required this.formKey,
   });
 
   final TextEditingController emailController;
   final TextEditingController passwordController;
-  final LoginCubit loginCubit;
   final GlobalKey<FormState> formKey;
 
   @override
   Widget build(BuildContext context) {
+        var loginCubit = context.read<LoginCubit>();
+
     return Column(
       spacing: 20,
       children: [

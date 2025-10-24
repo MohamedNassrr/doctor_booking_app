@@ -7,9 +7,9 @@ final class LoginLoadingState extends LoginStates {}
 final class LoginSuccessState extends LoginStates {}
 
 final class LoginFailureState extends LoginStates {
-  final String faiure;
+  final String failure;
 
-  LoginFailureState(this.faiure);
+  LoginFailureState(this.failure);
 }
 
 final class ChangePasswordVisibilityState extends LoginStates {}

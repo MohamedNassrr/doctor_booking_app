@@ -1,7 +1,9 @@
 import 'package:clinic_booking_app/core/themes/app_color.dart';
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ForgetPassAndSingUpButtons extends StatelessWidget {
   const ForgetPassAndSingUpButtons({super.key});
@@ -11,7 +13,9 @@ class ForgetPassAndSingUpButtons extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRouting.rForgtetPass);
+          },
           child: Text(
             S.of(context).forgetPassword,
             style: Theme.of(
@@ -33,7 +37,7 @@ class ForgetPassAndSingUpButtons extends StatelessWidget {
                 ).textTheme.labelLarge!.copyWith(color: AppColors.blue),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    print('pressed');
+                    GoRouter.of(context).pushReplacement(AppRouting.rRegister);
                   },
               ),
             ],

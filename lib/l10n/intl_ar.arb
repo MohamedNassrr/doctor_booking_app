@@ -13,5 +13,16 @@
   "forgetPassword": "نسيت كلمة المرور؟",
   "dontHaveAccount": "ليس لديك حساب بعد؟",
   "signUp": "التسجيل",
-  "signIn": "تسجيل الدخول"
+  "signIn": "تسجيل الدخول",
+  "error_user_not_found": "لا يوجد مستخدم بهذا البريد الإلكتروني.",
+  "error_wrong_password": "كلمة المرور غير صحيحة.",
+  "error_account_exists": "الحساب موجود بالفعل ببيانات اعتماد مختلفة.",
+  "error_generic": "حدث خطأ غير متوقع. حاول مرة أخرى.",
+  "error_network_failed": "خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت.",
+  "yourName": "اسمك",
+  "usernameValidation": "من فضلك أدخل اسمك",
+  "weAreHereToHelpYou": "نحن هنا لمساعدتك!",
+  "createAccount": "إنشاء حساب",
+  "doYouHaveAnAccount": "هل لديك حساب؟"
+
 }
