@@ -4,21 +4,20 @@ import 'package:clinic_booking_app/core/services/local_storage.dart';
 import 'package:clinic_booking_app/core/services/service_locator.dart';
 import 'package:clinic_booking_app/core/themes/themes_data.dart';
 import 'package:clinic_booking_app/core/utils/app_routing.dart';
-import 'package:clinic_booking_app/firebase_options.dart';
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await LocalStorage.init();
   await ScreenUtil.ensureScreenSize();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await Firebase.initializeApp();
   Bloc.observer = MyBlocObserver();
   setup();
   await dotenv.load(fileName: ".env");

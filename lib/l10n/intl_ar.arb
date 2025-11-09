@@ -23,6 +23,15 @@
   "usernameValidation": "من فضلك أدخل اسمك",
   "weAreHereToHelpYou": "نحن هنا لمساعدتك!",
   "createAccount": "إنشاء حساب",
-  "doYouHaveAnAccount": "هل لديك حساب؟"
-
+  "doYouHaveAnAccount": "هل لديك حساب؟",
+  "fillYourProfile": "أكمل ملفك الشخصي",
+  "dateOfBirth": "تاريخ الميلاد",
+  "gender": "النوع",
+  "save": "حفظ",
+  "congratulations": "تهانينا!",
+  "accountReady": "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
+  "enterEmailVerification": "أدخل بريدك الإلكتروني، سنرسل لك رمز التحقق.",
+  "sendCode": "إرسال الرمز",
+  "resetCodeSent": "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
+  "chooseBirthDate": "يرجى اختيار تاريخ ميلادك."
 }

@@ -22,13 +22,24 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "accountReady": MessageLookupByLibrary.simpleMessage(
+      "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
+    ),
+    "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
+      "يرجى اختيار تاريخ ميلادك.",
+    ),
+    "congratulations": MessageLookupByLibrary.simpleMessage("تهانينا!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "dateOfBirth": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب بعد؟",
     ),
     "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
       "البريد الإلكتروني لا يمكن أن يكون فارغاً",
+    ),
+    "enterEmailVerification": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني، سنرسل لك رمز التحقق.",
     ),
     "error_account_exists": MessageLookupByLibrary.simpleMessage(
       "الحساب موجود بالفعل ببيانات اعتماد مختلفة.",
@@ -45,7 +56,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_wrong_password": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير صحيحة.",
     ),
+    "fillYourProfile": MessageLookupByLibrary.simpleMessage("أكمل ملفك الشخصي"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "gender": MessageLookupByLibrary.simpleMessage("النوع"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage(
       "مرحباً، أهلاً بعودتك",
     ),
@@ -63,6 +76,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال بريد إلكتروني صحيح",
     ),
+    "resetCodeSent": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
+    ),
+    "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
       "تسجيل الدخول بواسطة فيسبوك",

@@ -273,6 +273,91 @@ class S {
       args: [],
     );
   }
+
+  /// `Fill Your Profile`
+  String get fillYourProfile {
+    return Intl.message(
+      'Fill Your Profile',
+      name: 'fillYourProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date of Birth`
+  String get dateOfBirth {
+    return Intl.message(
+      'Date of Birth',
+      name: 'dateOfBirth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message('Gender', name: 'gender', desc: '', args: []);
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message('Save', name: 'save', desc: '', args: []);
+  }
+
+  /// `Congratulations!`
+  String get congratulations {
+    return Intl.message(
+      'Congratulations!',
+      name: 'congratulations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your account is ready to use. You will be redirected to the Home Page in a few seconds...`
+  String get accountReady {
+    return Intl.message(
+      'Your account is ready to use. You will be redirected to the Home Page in a few seconds...',
+      name: 'accountReady',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your Email, we will send you a verification code.`
+  String get enterEmailVerification {
+    return Intl.message(
+      'Enter your Email, we will send you a verification code.',
+      name: 'enterEmailVerification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Code`
+  String get sendCode {
+    return Intl.message('Send Code', name: 'sendCode', desc: '', args: []);
+  }
+
+  /// `A reset code has been sent to your email.`
+  String get resetCodeSent {
+    return Intl.message(
+      'A reset code has been sent to your email.',
+      name: 'resetCodeSent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please choose your birth date.`
+  String get chooseBirthDate {
+    return Intl.message(
+      'Please choose your birth date.',
+      name: 'chooseBirthDate',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

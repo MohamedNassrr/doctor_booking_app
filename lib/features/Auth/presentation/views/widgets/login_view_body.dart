@@ -1,3 +1,4 @@
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/core/widgets/custom_divider.dart';
 import 'package:clinic_booking_app/core/widgets/custom_text_button.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/login_cubit/login_cubit.dart';
@@ -9,6 +10,7 @@ import 'package:clinic_booking_app/features/auth/presentation/views/widgets/welc
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginViewBody extends StatefulWidget {
   const LoginViewBody({super.key});
@@ -33,7 +35,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
   Widget build(BuildContext context) {
     return BlocConsumer<LoginCubit, LoginStates>(
       listener: (context, state) {
-        if (state is LoginSuccessState) {}
+        if (state is LoginSuccessState) {
+          GoRouter.of(context).pushReplacement(AppRouting.rHome);
+        }
         if (state is LoginFailureState) {
           final l10n = S.of(context);
           String message;

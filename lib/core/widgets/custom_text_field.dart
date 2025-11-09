@@ -1,15 +1,12 @@
 import 'package:clinic_booking_app/core/themes/app_color.dart';
 import 'package:flutter/material.dart';
 
-class CustomFormField extends StatelessWidget {
-  const CustomFormField({
+class CustomTextField extends StatelessWidget {
+  const CustomTextField({
     super.key,
-    required this.controller,
     required this.hintText,
     required this.type,
-    this.onSubmit,
     this.radius = 8,
-    this.validation,
     this.suffix,
     this.suffixPressed,
     this.isPassword = false,
@@ -18,13 +15,11 @@ class CustomFormField extends StatelessWidget {
     this.isEnabled = true,
     this.onTap,
   });
-  final TextEditingController controller;
+
   final String hintText;
   final TextInputType type;
-  final Function(String)? onSubmit;
   final Function()? onTap;
   final Function()? suffixPressed;
-  final FormFieldValidator<String>? validation;
   final double radius;
   final IconData? suffix;
   final IconData? prefix;
@@ -36,13 +31,10 @@ class CustomFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 45,
-      child: TextFormField(
-        controller: controller,
+      child: TextField(
         keyboardType: type,
         onTap: onTap,
-        onFieldSubmitted: onSubmit,
         obscureText: isPassword,
-        validator: validation,
         decoration: InputDecoration(
           enabled: isEnabled,
           contentPadding: const EdgeInsets.all(23),

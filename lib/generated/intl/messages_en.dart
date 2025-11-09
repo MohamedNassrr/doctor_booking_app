@@ -22,7 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "accountReady": MessageLookupByLibrary.simpleMessage(
+      "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
+    ),
+    "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
+      "Please choose your birth date.",
+    ),
+    "congratulations": MessageLookupByLibrary.simpleMessage("Congratulations!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
+    "dateOfBirth": MessageLookupByLibrary.simpleMessage("Date of Birth"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
@@ -31,6 +39,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
       "Email can\'t be empty",
+    ),
+    "enterEmailVerification": MessageLookupByLibrary.simpleMessage(
+      "Enter your Email, we will send you a verification code.",
     ),
     "error_account_exists": MessageLookupByLibrary.simpleMessage(
       "Account already exists with different credentials.",
@@ -47,7 +58,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_wrong_password": MessageLookupByLibrary.simpleMessage(
       "Wrong password provided.",
     ),
+    "fillYourProfile": MessageLookupByLibrary.simpleMessage(
+      "Fill Your Profile",
+    ),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "gender": MessageLookupByLibrary.simpleMessage("Gender"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage("Hi, Welcome Back!"),
     "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
       "Hope you\'re doing fine.",
@@ -63,6 +78,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email",
     ),
+    "resetCodeSent": MessageLookupByLibrary.simpleMessage(
+      "A reset code has been sent to your email.",
+    ),
+    "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
       "Sign In with Facebook",

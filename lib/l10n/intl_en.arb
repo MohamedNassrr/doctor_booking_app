@@ -23,7 +23,16 @@
   "usernameValidation": "Please enter your name",
   "weAreHereToHelpYou": "We are here to help you!",
   "createAccount": "Create Account",
-  "doYouHaveAnAccount": "Do you have an account?"
+  "doYouHaveAnAccount": "Do you have an account?",
+  "fillYourProfile": "Fill Your Profile",
+  "dateOfBirth": "Date of Birth",
+  "gender": "Gender",
+  "save": "Save",
+  "congratulations": "Congratulations!",
+  "accountReady": "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
+  "enterEmailVerification": "Enter your Email, we will send you a verification code.",
+  "sendCode": "Send Code",
+  "resetCodeSent": "A reset code has been sent to your email.",
+  "chooseBirthDate": "Please choose your birth date."
 
-  
 }

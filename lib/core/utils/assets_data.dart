@@ -6,4 +6,5 @@ class AssetsData {
   static const googleIcon = 'assets/images/google.png';
   static const facebookIcon = 'assets/images/facebook.png';
   static const loadingAnimation = 'assets/animation/doctor_loading_indicator.json';
+  static const defaultImage = 'assets/images/default_image.png';
 }
