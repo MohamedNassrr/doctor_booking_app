@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "192065911535",
+    "project_id": "doctor-booking-3eeae",
+    "storage_bucket": "doctor-booking-3eeae.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192065911535:android:8f85bdb0d828855b86791a",
+        "android_client_info": {
+          "package_name": "com.example.clinic_booking_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192065911535-jamu1rcion8q37a5a6hrokmvt3obmi50.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clinic_booking_app",
+            "certificate_hash": "3888b7be26f3b4012543e49634a781841df1cb7c"
+          }
+        },
+        {
+          "client_id": "192065911535-41blec65abniilf0ipjjmru62rdc6rvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdvarMPzJq4Z381Poma0442vg1PopjONI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192065911535-41blec65abniilf0ipjjmru62rdc6rvi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "192065911535-rfqq7ril9lq1cm935geh25vsc42576hf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.clinicBookingApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
