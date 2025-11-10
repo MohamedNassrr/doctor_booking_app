@@ -2,4 +2,9 @@ class AssetsData {
   static const onboardingOne = 'assets/images/onboarding1.png';
   static const onboardingTwo = 'assets/images/onboarding2.png';
   static const onboardingThree = 'assets/images/onboarding3.jpg';
+  static const logo = 'assets/images/logo.png';
+  static const googleIcon = 'assets/images/google.png';
+  static const facebookIcon = 'assets/images/facebook.png';
+  static const loadingAnimation = 'assets/animation/doctor_loading_indicator.json';
+  static const defaultImage = 'assets/images/default_image.png';
 }

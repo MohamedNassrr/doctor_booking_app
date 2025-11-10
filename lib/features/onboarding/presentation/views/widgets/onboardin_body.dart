@@ -15,7 +15,7 @@ class OnBoardingBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       spacing: 10,
       children: [
-        Image(image: AssetImage(item[index].imageUrl)),
+        Flexible(child: Image(image: AssetImage(item[index].imageUrl))),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
@@ -34,7 +34,6 @@ class OnBoardingBody extends StatelessWidget {
                   context,
                 ).textTheme.labelSmall!.copyWith(color: AppColors.grey500),
               ),
-              const SizedBox(height: 6),
             ],
           ),
         ),

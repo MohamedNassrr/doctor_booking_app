@@ -21,5 +21,81 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "accountReady": MessageLookupByLibrary.simpleMessage(
+      "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
+    ),
+    "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
+      "يرجى اختيار تاريخ ميلادك.",
+    ),
+    "congratulations": MessageLookupByLibrary.simpleMessage("تهانينا!"),
+    "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "dateOfBirth": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
+    "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "ليس لديك حساب بعد؟",
+    ),
+    "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني لا يمكن أن يكون فارغاً",
+    ),
+    "enterEmailVerification": MessageLookupByLibrary.simpleMessage(
+      "أدخل بريدك الإلكتروني، سنرسل لك رمز التحقق.",
+    ),
+    "error_account_exists": MessageLookupByLibrary.simpleMessage(
+      "الحساب موجود بالفعل ببيانات اعتماد مختلفة.",
+    ),
+    "error_generic": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ غير متوقع. حاول مرة أخرى.",
+    ),
+    "error_network_failed": MessageLookupByLibrary.simpleMessage(
+      "خطأ في الشبكة. يرجى التحقق من اتصال الإنترنت.",
+    ),
+    "error_user_not_found": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد مستخدم بهذا البريد الإلكتروني.",
+    ),
+    "error_wrong_password": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور غير صحيحة.",
+    ),
+    "fillYourProfile": MessageLookupByLibrary.simpleMessage("أكمل ملفك الشخصي"),
+    "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "gender": MessageLookupByLibrary.simpleMessage("النوع"),
+    "hiWelcomeBack": MessageLookupByLibrary.simpleMessage(
+      "مرحباً، أهلاً بعودتك",
+    ),
+    "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
+      "نأمل أن تكون بخير.",
+    ),
+    "or": MessageLookupByLibrary.simpleMessage("أو"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور لا يمكن أن تكون فارغة",
+    ),
+    "passwordTooShort": MessageLookupByLibrary.simpleMessage(
+      "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    ),
+    "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
+      "يرجى إدخال بريد إلكتروني صحيح",
+    ),
+    "resetCodeSent": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
+    ),
+    "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
+    "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "signInWithFacebook": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة فيسبوك",
+    ),
+    "signInWithGoogle": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول بواسطة جوجل",
+    ),
+    "signUp": MessageLookupByLibrary.simpleMessage("التسجيل"),
+    "usernameValidation": MessageLookupByLibrary.simpleMessage(
+      "من فضلك أدخل اسمك",
+    ),
+    "weAreHereToHelpYou": MessageLookupByLibrary.simpleMessage(
+      "نحن هنا لمساعدتك!",
+    ),
+    "yourEmail": MessageLookupByLibrary.simpleMessage("بريدك الإلكتروني"),
+    "yourName": MessageLookupByLibrary.simpleMessage("اسمك"),
+  };
 }
