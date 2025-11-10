@@ -80,9 +80,13 @@ abstract class AppRouting {
 
   static String initialLocaton() {
     final onBoarding = LocalStorage.getData(key: 'onBoarding');
-    //   User? user = FirebaseAuth.instance.currentUser;
+    User? user = FirebaseAuth.instance.currentUser;
     if (onBoarding != null) {
-      return rLogin;
+      if (user != null) {
+        return rHome;
+      } else {
+        return rLogin;
+      }
     } else {
       return rOnBoarding;
     }
