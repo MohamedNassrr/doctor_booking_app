@@ -26,51 +26,53 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
   
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
-      child: Form(
-        key: formKey,
-        child: Column(
-          children: [
-            WelcomingText(
-              welcomingText: S.of(context).createAccount,
-              welcomingDescription: S.of(context).weAreHereToHelpYou,
-            ),
-            RegisterFormFields(
-              userNameController: userNameController,
-              emailController: emailController,
-              passwordController: passwordController,
-            ),
-            const SizedBox(height: 23),
-            CustomTextButton(
-              isLoading: State is UserGetDataLoadingStates,
-              title: S.of(context).createAccount,
-              onPressed: () {
-                if (formKey.currentState!.validate()) {
-                  GoRouter.of(context).push(
-                    AppRouting.rFillProfile,
-                    extra: {
-                      'name': userNameController.text,
-                      'email': emailController.text,
-                      'password': passwordController.text,
-                    },
-                  );
-                }
-              },
-            ),
-            const SizedBox(height: 23),
-            const CustomDivider(),
-            const SizedBox(height: 23),
-            const SocialAuth(),
-            const SizedBox(height: 23),
-            RedirectAuthRow(
-              textRow: S.of(context).doYouHaveAnAccount,
-              authText: S.of(context).signIn,
-              onTap: () {
-                GoRouter.of(context).pushReplacement(AppRouting.rLogin);
-              },
-            ),
-          ],
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+        child: Form(
+          key: formKey,
+          child: Column(
+            children: [
+              WelcomingText(
+                welcomingText: S.of(context).createAccount,
+                welcomingDescription: S.of(context).weAreHereToHelpYou,
+              ),
+              RegisterFormFields(
+                userNameController: userNameController,
+                emailController: emailController,
+                passwordController: passwordController,
+              ),
+              const SizedBox(height: 23),
+              CustomTextButton(
+                isLoading: State is UserGetDataLoadingStates,
+                title: S.of(context).createAccount,
+                onPressed: () {
+                  if (formKey.currentState!.validate()) {
+                    GoRouter.of(context).push(
+                      AppRouting.rFillProfile,
+                      extra: {
+                        'name': userNameController.text,
+                        'email': emailController.text,
+                        'password': passwordController.text,
+                      },
+                    );
+                  }
+                },
+              ),
+              const SizedBox(height: 23),
+              const CustomDivider(),
+              const SizedBox(height: 23),
+              const SocialAuth(),
+              const SizedBox(height: 23),
+              RedirectAuthRow(
+                textRow: S.of(context).doYouHaveAnAccount,
+                authText: S.of(context).signIn,
+                onTap: () {
+                  GoRouter.of(context).pushReplacement(AppRouting.rLogin);
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

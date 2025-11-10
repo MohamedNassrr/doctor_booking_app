@@ -4,10 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginCubit extends Cubit<LoginStates> {
-  LoginCubit()
-    : super(LoginInitialState());
+  LoginCubit(this._firebaseAuth) : super(LoginInitialState());
 
-
+  final FirebaseAuth _firebaseAuth;
 
   Future<void> userLogin({
     required String email,
@@ -15,16 +14,15 @@ class LoginCubit extends Cubit<LoginStates> {
   }) async {
     emit(LoginLoadingState());
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await _firebaseAuth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-      emit(LoginSuccessState());
+      emit(LoginSuccessState(_firebaseAuth.currentUser!.uid));
     } on FirebaseAuthException catch (e) {
       emit(LoginFailureState(e.code));
     }
   }
-
 
   bool isPassword = true;
   IconData suffix = Icons.visibility_outlined;

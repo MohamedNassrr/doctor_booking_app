@@ -6,8 +6,10 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class GoogleService {
-  final FirebaseAuth auth = FirebaseAuth.instance;
-  final GoogleSignIn googleSignIn = GoogleSignIn.instance;
+  final FirebaseAuth auth;
+  final GoogleSignIn googleSignIn;
+
+  GoogleService({required this.auth, required this.googleSignIn});
 
   Future<User?> signInWithGoogle() async {
     try {

@@ -9,7 +9,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class RegisterCubit extends Cubit<RegisterStates> {
-  RegisterCubit() : super(RegisterInitialStates());
+  RegisterCubit(this._auth, this._firestore) : super(RegisterInitialStates());
+  final FirebaseAuth _auth;
+  final FirebaseFirestore _firestore;
 
   Future<void> userRegister({
     required String email,
@@ -18,13 +20,13 @@ class RegisterCubit extends Cubit<RegisterStates> {
     required String password,
   }) async {
     emit(RegisterLoadingStates());
-    
-    await FirebaseAuth.instance
+
+    await _auth
         .createUserWithEmailAndPassword(email: email, password: password)
         .then((value) {
           log('email: ${value.user!.email}');
           log('uid ${value.user!.uid}');
-          
+
           createUser(
             email: email,
             userName: userName,
@@ -52,7 +54,7 @@ class RegisterCubit extends Cubit<RegisterStates> {
       uId: uId,
       profileImage: AssetsData.defaultImage,
     );
-    FirebaseFirestore.instance
+    _firestore
         .collection('users')
         .doc(uId)
         .set(model.toMap())

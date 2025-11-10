@@ -1,4 +1,5 @@
 import 'package:clinic_booking_app/core/services/local_storage.dart';
+import 'package:clinic_booking_app/core/services/service_locator.dart';
 import 'package:clinic_booking_app/features/Auth/presentation/views/login_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/forget_pass_cubit/forget_pass_cubit.dart';
 import 'package:clinic_booking_app/features/auth/presentation/controller/login_cubit/login_cubit.dart';
@@ -9,6 +10,8 @@ import 'package:clinic_booking_app/features/auth/presentation/views/forget_pass_
 import 'package:clinic_booking_app/features/auth/presentation/views/register_view.dart';
 import 'package:clinic_booking_app/features/home/home.dart';
 import 'package:clinic_booking_app/features/onboarding/presentation/views/onboaring_view.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -30,14 +33,15 @@ abstract class AppRouting {
       GoRoute(
         path: rLogin,
         builder: (context, state) => BlocProvider(
-          create: (context) => LoginCubit(),
+          create: (context) => LoginCubit(getIt<FirebaseAuth>()),
           child: const LoginView(),
         ),
       ),
       GoRoute(
         path: rRegister,
         builder: (context, state) => BlocProvider(
-          create: (context) => RegisterCubit(),
+          create: (context) =>
+              RegisterCubit(getIt<FirebaseAuth>(), getIt<FirebaseFirestore>()),
           child: const RegisterView(),
         ),
       ),
@@ -54,7 +58,12 @@ abstract class AppRouting {
           final data = state.extra as Map<String, dynamic>;
           return MultiBlocProvider(
             providers: [
-              BlocProvider(create: (context) => RegisterCubit()),
+              BlocProvider(
+                create: (context) => RegisterCubit(
+                  getIt<FirebaseAuth>(),
+                  getIt<FirebaseFirestore>(),
+                ),
+              ),
               BlocProvider(create: (context) => UserCubit()..getUserData()),
             ],
             child: FillProfileView(
