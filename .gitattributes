@@ -1,0 +1,10 @@
+# Tell GitHub Linguist to treat only lib/ as source code
+lib/* linguist-detectable=true
+
+# Ignore platform folders for language stats
+android/* linguist-vendored
+ios/* linguist-vendored
+linux/* linguist-vendored
+macos/* linguist-vendored
+windows/* linguist-vendored
+web/* linguist-vendored
