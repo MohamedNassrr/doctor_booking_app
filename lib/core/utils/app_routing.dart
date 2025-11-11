@@ -8,7 +8,7 @@ import 'package:clinic_booking_app/features/auth/presentation/controller/user_cu
 import 'package:clinic_booking_app/features/auth/presentation/views/fill_profile_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/forget_pass_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/register_view.dart';
-import 'package:clinic_booking_app/features/home/home.dart';
+import 'package:clinic_booking_app/features/home/presentation/views/home_view.dart';
 import 'package:clinic_booking_app/features/onboarding/presentation/views/onboaring_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
