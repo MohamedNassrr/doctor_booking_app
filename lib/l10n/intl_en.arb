@@ -33,6 +33,10 @@
   "enterEmailVerification": "Enter your Email, we will send you a verification code.",
   "sendCode": "Send Code",
   "resetCodeSent": "A reset code has been sent to your email.",
-  "chooseBirthDate": "Please choose your birth date."
+  "chooseBirthDate": "Please choose your birth date.",
+  "searchDoctor": "Search for a doctor...",
+  "categories": "Categories",
+  "seeAll": "See All",
+  "medicalCenters": "Medical Centers"
 
 }

@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
     ),
+    "categories": MessageLookupByLibrary.simpleMessage("التصنيفات"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "يرجى اختيار تاريخ ميلادك.",
     ),
@@ -65,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
       "نأمل أن تكون بخير.",
     ),
+    "medicalCenters": MessageLookupByLibrary.simpleMessage("المراكز الطبية"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
@@ -80,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
     ),
     "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "searchDoctor": MessageLookupByLibrary.simpleMessage("ابحث عن طبيب..."),
+    "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(

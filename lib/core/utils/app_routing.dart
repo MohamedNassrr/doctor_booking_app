@@ -74,7 +74,7 @@ abstract class AppRouting {
           );
         },
       ),
-      GoRoute(path: rHome, builder: (context, state) => const Home()),
+      GoRoute(path: rHome, builder: (context, state) => const HomeView()),
     ],
   );
 

@@ -2,7 +2,7 @@
   "hopeYouAreDoingFine": "نأمل أن تكون بخير.",
   "hiWelcomeBack": "مرحباً، أهلاً بعودتك",
   "yourEmail": "بريدك الإلكتروني",
-   "emailCantBeEmpty": "البريد الإلكتروني لا يمكن أن يكون فارغاً",
+  "emailCantBeEmpty": "البريد الإلكتروني لا يمكن أن يكون فارغاً",
   "pleaseEnterValidEmail": "يرجى إدخال بريد إلكتروني صحيح",
   "password": "كلمة المرور",
   "passwordCantBeEmpty": "كلمة المرور لا يمكن أن تكون فارغة",
@@ -33,5 +33,9 @@
   "enterEmailVerification": "أدخل بريدك الإلكتروني، سنرسل لك رمز التحقق.",
   "sendCode": "إرسال الرمز",
   "resetCodeSent": "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
-  "chooseBirthDate": "يرجى اختيار تاريخ ميلادك."
+  "chooseBirthDate": "يرجى اختيار تاريخ ميلادك.",
+  "searchDoctor": "ابحث عن طبيب...",
+  "categories": "التصنيفات",
+  "seeAll": "عرض الكل",
+  "medicalCenters": "المراكز الطبية"
 }

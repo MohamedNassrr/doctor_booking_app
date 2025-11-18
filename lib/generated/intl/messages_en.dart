@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
     ),
+    "categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "Please choose your birth date.",
     ),
@@ -67,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
       "Hope you\'re doing fine.",
     ),
+    "medicalCenters": MessageLookupByLibrary.simpleMessage("Medical Centers"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
@@ -82,6 +84,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "A reset code has been sent to your email.",
     ),
     "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "searchDoctor": MessageLookupByLibrary.simpleMessage(
+      "Search for a doctor...",
+    ),
+    "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(

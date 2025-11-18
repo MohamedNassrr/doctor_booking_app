@@ -358,6 +358,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Search for a doctor...`
+  String get searchDoctor {
+    return Intl.message(
+      'Search for a doctor...',
+      name: 'searchDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories {
+    return Intl.message('Categories', name: 'categories', desc: '', args: []);
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message('See All', name: 'seeAll', desc: '', args: []);
+  }
+
+  /// `Medical Centers`
+  String get medicalCenters {
+    return Intl.message(
+      'Medical Centers',
+      name: 'medicalCenters',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
