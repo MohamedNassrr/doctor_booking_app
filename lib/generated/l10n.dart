@@ -388,6 +388,21 @@ class S {
       args: [],
     );
   }
+
+  /// `All Doctors`
+  String get allDoctors {
+    return Intl.message('All Doctors', name: 'allDoctors', desc: '', args: []);
+  }
+
+  /// `founds`
+  String get founds {
+    return Intl.message('founds', name: 'founds', desc: '', args: []);
+  }
+
+  /// `Default`
+  String get defaultSorting {
+    return Intl.message('Default', name: 'defaultSorting', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

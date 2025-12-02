@@ -1,5 +1,5 @@
-import 'package:clinic_booking_app/features/home/presentation/controller/cubit/home_cubit.dart';
-import 'package:clinic_booking_app/features/home/presentation/controller/cubit/home_states.dart';
+import 'package:clinic_booking_app/features/home/presentation/controller/home_cubit/home_cubit.dart';
+import 'package:clinic_booking_app/features/home/presentation/controller/home_cubit/home_states.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,7 +13,9 @@ class HomeView extends StatelessWidget {
       builder: (context, state) {
         var bottomNavCubit = context.read<HomeCubit>();
         return Scaffold(
-          body: bottomNavCubit.screens[bottomNavCubit.currentIndex],
+          body: SafeArea(
+            child: bottomNavCubit.screens[bottomNavCubit.currentIndex],
+          ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: bottomNavCubit.currentIndex,
             onTap: (index) {

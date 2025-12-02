@@ -37,6 +37,9 @@
   "searchDoctor": "Search for a doctor...",
   "categories": "Categories",
   "seeAll": "See All",
-  "medicalCenters": "Medical Centers"
+  "medicalCenters": "Medical Centers",
+  "allDoctors": "All Doctors",
+  "founds": "founds",
+  "defaultSorting": "Default"
 
 }

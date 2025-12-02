@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
     ),
+    "allDoctors": MessageLookupByLibrary.simpleMessage("جميع الأطباء"),
     "categories": MessageLookupByLibrary.simpleMessage("التصنيفات"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "يرجى اختيار تاريخ ميلادك.",
@@ -32,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "congratulations": MessageLookupByLibrary.simpleMessage("تهانينا!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
+    "defaultSorting": MessageLookupByLibrary.simpleMessage("افتراضي"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب بعد؟",
@@ -59,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fillYourProfile": MessageLookupByLibrary.simpleMessage("أكمل ملفك الشخصي"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "founds": MessageLookupByLibrary.simpleMessage("نتيجه"),
     "gender": MessageLookupByLibrary.simpleMessage("النوع"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage(
       "مرحباً، أهلاً بعودتك",

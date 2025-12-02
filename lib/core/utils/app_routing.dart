@@ -9,6 +9,7 @@ import 'package:clinic_booking_app/features/auth/presentation/views/fill_profile
 import 'package:clinic_booking_app/features/auth/presentation/views/forget_pass_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/register_view.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/home_view.dart';
+import 'package:clinic_booking_app/features/home/presentation/views/category_view.dart';
 import 'package:clinic_booking_app/features/onboarding/presentation/views/onboaring_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -22,6 +23,7 @@ abstract class AppRouting {
   static const rForgtetPass = '/ForgetPassView';
   static const rFillProfile = '/FillProfileView';
   static const rHome = '/Home';
+  static const rCategories = '/CategoryView';
 
   static final router = GoRouter(
     initialLocation: initialLocaton(),
@@ -75,6 +77,10 @@ abstract class AppRouting {
         },
       ),
       GoRoute(path: rHome, builder: (context, state) => const HomeView()),
+      GoRoute(
+        path: rCategories,
+        builder: (context, state) => const CategoryView(),
+      ),
     ],
   );
 

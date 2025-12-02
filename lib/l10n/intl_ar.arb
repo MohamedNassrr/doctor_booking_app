@@ -37,5 +37,8 @@
   "searchDoctor": "ابحث عن طبيب...",
   "categories": "التصنيفات",
   "seeAll": "عرض الكل",
-  "medicalCenters": "المراكز الطبية"
+  "medicalCenters": "المراكز الطبية",
+  "allDoctors": "جميع الأطباء",
+  "founds": "نتيجه",
+  "defaultSorting": "افتراضي"
 }

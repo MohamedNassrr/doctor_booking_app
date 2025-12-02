@@ -4,7 +4,7 @@ import 'package:clinic_booking_app/core/services/local_storage.dart';
 import 'package:clinic_booking_app/core/services/service_locator.dart';
 import 'package:clinic_booking_app/core/themes/themes_data.dart';
 import 'package:clinic_booking_app/core/utils/app_routing.dart';
-import 'package:clinic_booking_app/features/home/presentation/controller/cubit/home_cubit.dart';
+import 'package:clinic_booking_app/features/home/presentation/controller/home_cubit/home_cubit.dart';
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';

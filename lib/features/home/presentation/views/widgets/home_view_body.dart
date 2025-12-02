@@ -1,4 +1,5 @@
 import 'package:clinic_booking_app/core/themes/app_color.dart';
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/core/widgets/custom_text_field.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/widgets/carousel_slider_widget.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/widgets/categories_grid_list.dart';
@@ -8,6 +9,7 @@ import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -17,17 +19,6 @@ class HomeViewBody extends StatelessWidget {
     final l10n = S.of(context);
     return CustomScrollView(
       slivers: [
-        SliverAppBar(
-          actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 24),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(FontAwesomeIcons.solidBell),
-              ),
-            ),
-          ],
-        ),
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 10),
@@ -46,7 +37,12 @@ class HomeViewBody extends StatelessWidget {
                   onTap: () {},
                 ),
                 const CarouselSliderWidget(),
-                CustomListHeader(headerText: l10n.categories, onPressed: () {}),
+                CustomListHeader(
+                  headerText: l10n.categories,
+                  onPressed: () {
+                    GoRouter.of(context).push(AppRouting.rCategories);
+                  },
+                ),
               ],
             ),
           ),
@@ -57,7 +53,7 @@ class HomeViewBody extends StatelessWidget {
             crossAxisCount: 4,
             mainAxisExtent: 100,
           ),
-          itemBuilder: (context, index) =>  CategoriesGridList(index: index,),
+          itemBuilder: (context, index) => CategoriesGridList(index: index),
         ),
         SliverToBoxAdapter(
           child: Padding(

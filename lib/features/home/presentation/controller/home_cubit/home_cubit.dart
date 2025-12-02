@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:clinic_booking_app/core/utils/assets_data.dart';
 import 'package:clinic_booking_app/features/doctor_booking/presentation/views/doctor_booking_view.dart';
-import 'package:clinic_booking_app/features/home/presentation/controller/cubit/home_states.dart';
+import 'package:clinic_booking_app/features/home/presentation/controller/home_cubit/home_states.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:clinic_booking_app/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter/widgets.dart';

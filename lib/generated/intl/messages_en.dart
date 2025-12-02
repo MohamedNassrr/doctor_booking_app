@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
     ),
+    "allDoctors": MessageLookupByLibrary.simpleMessage("All Doctors"),
     "categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "Please choose your birth date.",
@@ -32,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "congratulations": MessageLookupByLibrary.simpleMessage("Congratulations!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("Date of Birth"),
+    "defaultSorting": MessageLookupByLibrary.simpleMessage("Default"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
@@ -63,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Fill Your Profile",
     ),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "founds": MessageLookupByLibrary.simpleMessage("founds"),
     "gender": MessageLookupByLibrary.simpleMessage("Gender"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage("Hi, Welcome Back!"),
     "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(

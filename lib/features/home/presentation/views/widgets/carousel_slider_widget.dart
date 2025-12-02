@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:clinic_booking_app/core/themes/app_color.dart';
-import 'package:clinic_booking_app/features/home/presentation/controller/cubit/home_cubit.dart';
+import 'package:clinic_booking_app/features/home/presentation/controller/home_cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
