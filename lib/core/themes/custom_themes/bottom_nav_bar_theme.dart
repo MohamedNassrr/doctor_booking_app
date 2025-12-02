@@ -8,7 +8,7 @@ class BottomNavTheme {
         unselectedItemColor: AppColors.grey400,
       );
 
-      static BottomNavigationBarThemeData darkBotNavBar =
+  static BottomNavigationBarThemeData darkBotNavBar =
       const BottomNavigationBarThemeData(
         selectedItemColor: AppColors.grey600,
         unselectedItemColor: AppColors.grey400,

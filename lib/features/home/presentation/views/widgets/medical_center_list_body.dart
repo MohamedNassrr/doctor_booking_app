@@ -12,7 +12,7 @@ class MedicalCenterListBody extends StatelessWidget {
     return SizedBox(
       width: 232.w,
       child: InkWell(
-        onTap: (){
+        onTap: () {
           print('item card pressed');
         },
         child: Card(

@@ -1,4 +1,3 @@
-
 import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,8 +13,8 @@ class GoogleService {
   Future<User?> signInWithGoogle() async {
     try {
       await googleSignIn.initialize(clientId: dotenv.env['FIREBASE_CLIENT_ID']);
-      final GoogleSignInAccount googleSignInAccount =
-          await googleSignIn.authenticate();
+      final GoogleSignInAccount googleSignInAccount = await googleSignIn
+          .authenticate();
       final GoogleSignInAuthentication googleAuth =
           googleSignInAccount.authentication;
       final OAuthCredential credential = GoogleAuthProvider.credential(

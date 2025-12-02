@@ -6,7 +6,6 @@ import 'package:clinic_booking_app/features/home/presentation/views/widgets/home
 import 'package:clinic_booking_app/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter/widgets.dart';
 
-
 class HomeCubit extends Cubit<HomeStates> {
   HomeCubit() : super(HomeInitialStates());
 
@@ -16,27 +15,25 @@ class HomeCubit extends Cubit<HomeStates> {
     ProfileView(),
   ];
 
-  List<String> banners =[
+  List<String> banners = [
     AssetsData.sliderImageOne,
     AssetsData.sliderImageTwo,
     AssetsData.sliderImageThree,
   ];
   int currentIndex = 0;
-  void changeBotNavBarIndex(int index){
+  void changeBotNavBarIndex(int index) {
     currentIndex = index;
-    if(index == 1){
-       const DoctorBookingView();
-       
+    if (index == 1) {
+      const DoctorBookingView();
     }
-    if(index == 2){
+    if (index == 2) {
       const ProfileView();
     }
     emit(BottomNavChangeIndexStates());
   }
 
-
   int currentBanner = 0;
-  void changeBanner(int index){
+  void changeBanner(int index) {
     currentBanner = index;
     emit(BannerChangeIndexStates());
   }

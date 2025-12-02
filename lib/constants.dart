@@ -3,7 +3,7 @@ import 'package:clinic_booking_app/core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
 
 class Constants {
-  static const List<Color> categoryColor =  [
+  static const List<Color> categoryColor = [
     AppColors.pink,
     AppColors.green,
     AppColors.orange,

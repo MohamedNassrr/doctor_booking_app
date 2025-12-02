@@ -28,7 +28,6 @@ class ProfileWidget extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 32),
-       
       ],
     );
   }

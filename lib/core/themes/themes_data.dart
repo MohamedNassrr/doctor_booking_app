@@ -11,9 +11,7 @@ class AppTheme {
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     textTheme: CustomTextTheme.darkTextTheme,
-    
+
     bottomNavigationBarTheme: BottomNavTheme.darkBotNavBar,
   );
 }
-
-

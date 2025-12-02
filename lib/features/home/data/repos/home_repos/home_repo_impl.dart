@@ -1,0 +1,47 @@
+import 'package:clinic_booking_app/core/errors/api_failure.dart';
+import 'package:clinic_booking_app/core/services/api_endpoints.dart';
+import 'package:clinic_booking_app/core/services/api_service.dart';
+import 'package:clinic_booking_app/features/home/data/models/categories_model.dart';
+import 'package:clinic_booking_app/features/home/data/models/clinics_model.dart';
+import 'package:clinic_booking_app/features/home/data/models/doctors_model.dart';
+import 'package:clinic_booking_app/features/home/data/repos/home_repos/home_repo.dart';
+import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
+
+class HomeRepoImpl implements HomeRepo {
+  final ApiService apiService;
+
+  HomeRepoImpl(this.apiService);
+  @override
+  Future<Either<ApisFailure, List<CategoriesModel>>> fetchCategories() async {
+    try {
+      var data = await apiService.get(endPoint: ApiEndpoints.categoriesndPoint);
+      final List<CategoriesModel> categories = [];
+      for (var cat in data['categories']) {
+        try {
+          categories.add(CategoriesModel.fromJson(cat));
+        } catch (e) {
+          categories.add(CategoriesModel.fromJson(cat));
+        }
+      }
+      return right(categories);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailures.fromDioError(e));
+      }
+      return left(ServerFailures(e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<ApisFailure, List<ClinicsModel>>> fetchClinics() {
+    // TODO: implement fetchClinics
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Either<ApisFailure, List<DoctorsModel>>> fetchDoctors() {
+    // TODO: implement fetchDoctors
+    throw UnimplementedError();
+  }
+}

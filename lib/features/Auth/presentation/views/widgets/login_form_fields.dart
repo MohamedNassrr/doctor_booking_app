@@ -19,7 +19,7 @@ class LoginFormFields extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-        var loginCubit = context.read<LoginCubit>();
+    var loginCubit = context.read<LoginCubit>();
 
     return Column(
       spacing: 20,

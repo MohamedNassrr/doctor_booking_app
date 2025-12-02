@@ -1,11 +1,13 @@
-
 import 'package:clinic_booking_app/core/themes/app_color.dart';
 import 'package:clinic_booking_app/core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
 
 class WelcomingText extends StatelessWidget {
-  const WelcomingText({super.key, required this.welcomingText, required this.welcomingDescription});
-
+  const WelcomingText({
+    super.key,
+    required this.welcomingText,
+    required this.welcomingDescription,
+  });
 
   final String welcomingText;
   final String welcomingDescription;

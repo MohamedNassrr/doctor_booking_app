@@ -35,20 +35,10 @@ class CategoriesViewBody extends StatelessWidget {
             indicator: const UnderlineTabIndicator(
               borderSide: BorderSide(color: AppColors.mainColor, width: 2),
             ),
-            tabs: const [
-              Tab(text: "Pediatrician"),
-              
-            ],
+            tabs: const [Tab(text: "Pediatrician")],
           ),
           const SizedBox(height: 10),
-          const Expanded(
-            child: TabBarView(
-              children: [
-                PediatricianTab(),
-               
-              ],
-            ),
-          ),
+          const Expanded(child: TabBarView(children: [PediatricianTab()])),
         ],
       ),
     );

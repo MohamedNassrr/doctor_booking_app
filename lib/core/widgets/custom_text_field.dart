@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
     this.isFilled = false,
     this.fillColor,
     this.borderColor = AppColors.grey300,
-     this.prefixSize = 15,
+    this.prefixSize = 15,
   });
 
   final String hintText;
@@ -67,7 +67,7 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-      borderSide:  BorderSide(color: borderColor),
+      borderSide: BorderSide(color: borderColor),
       borderRadius: BorderRadius.circular(radius),
     );
   }

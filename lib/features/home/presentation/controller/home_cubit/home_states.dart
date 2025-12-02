@@ -1,4 +1,3 @@
-
 sealed class HomeStates {}
 
 final class HomeInitialStates extends HomeStates {}

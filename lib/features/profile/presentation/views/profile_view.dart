@@ -7,7 +7,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(child: Text('Profile Screen'),),
+      body: Center(child: Text('Profile Screen')),
     );
   }
 }

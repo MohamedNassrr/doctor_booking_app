@@ -100,35 +100,35 @@ class CustomTextTheme {
       height: 1.5,
     ),
   );
-   static TextTheme darkTextTheme = TextTheme(
+  static TextTheme darkTextTheme = TextTheme(
     // Headings
     displayLarge: TextStyle(
       fontSize: 20.sp,
       fontFamily: 'Inter',
       fontWeight: FontWeight.bold,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     displayMedium: TextStyle(
       fontSize: 18.sp,
       fontFamily: 'Inter',
       fontWeight: FontWeight.bold,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     displaySmall: TextStyle(
       fontSize: 16.sp,
       fontFamily: 'Inter',
       fontWeight: FontWeight.bold,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     headlineMedium: TextStyle(
       fontSize: 14.sp,
       fontFamily: 'Inter',
       fontWeight: FontWeight.bold,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
 
     // Body
@@ -137,21 +137,21 @@ class CustomTextTheme {
       fontFamily: 'Inter',
       fontWeight: FontWeight.normal,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     bodyMedium: TextStyle(
       fontSize: 16.sp,
       fontFamily: 'Inter',
       fontWeight: FontWeight.w600, // SemiBold
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     bodySmall: TextStyle(
       fontSize: 14.sp,
       fontFamily: 'Inter',
       fontWeight: FontWeight.bold,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
 
     // Body variants (using label styles for additional body text)
@@ -160,7 +160,7 @@ class CustomTextTheme {
       fontFamily: 'Inter',
       fontWeight: FontWeight.w600, // SemiBold
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     labelMedium: TextStyle(
       fontSize: 14.sp,
@@ -174,7 +174,7 @@ class CustomTextTheme {
       fontFamily: 'Inter',
       fontWeight: FontWeight.normal,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
 
     // Body XS variants (using title styles)
@@ -183,21 +183,21 @@ class CustomTextTheme {
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w700,
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     titleMedium: TextStyle(
       fontSize: 12.sp,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w600, // SemiBold
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
     titleSmall: TextStyle(
       fontSize: 12.sp,
       fontFamily: 'Poppins',
       fontWeight: FontWeight.w500, // Medium
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
 
     // Button
@@ -207,8 +207,7 @@ class CustomTextTheme {
       fontFamily: 'Inter',
       fontWeight: FontWeight.w500, // Medium
       height: 1.5,
-      color: Colors.white
+      color: Colors.white,
     ),
   );
-
 }
