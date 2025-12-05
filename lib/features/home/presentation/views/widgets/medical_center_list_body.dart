@@ -1,4 +1,5 @@
 import 'package:clinic_booking_app/core/themes/app_color.dart';
+import 'package:clinic_booking_app/core/widgets/icon_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -85,42 +86,16 @@ class MedicalCenterListBody extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              const WidgetSpan(
-                                child: Icon(
-                                  FontAwesomeIcons.locationDot,
-                                  size: 15,
-                                ),
-                              ),
-                              WidgetSpan(child: SizedBox(width: 3.w)),
-                              TextSpan(
-                                text: clinicLocation.isEmpty
-                                    ? ' '
-                                    : clinicLocation,
-                                style: Theme.of(context).textTheme.labelSmall,
-                              ),
-                            ],
-                          ),
+                        IconTextWidget(
+                          title: clinicLocation.isEmpty ? ' ' : clinicLocation,
+                          icon: FontAwesomeIcons.locationDot,
+                          iconColor: AppColors.mainColor,
                         ),
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: "$rating",
-                                style: Theme.of(context).textTheme.labelSmall,
-                              ),
-                              WidgetSpan(child: SizedBox(width: 3.w)),
-                              const WidgetSpan(
-                                child: Icon(
-                                  FontAwesomeIcons.solidStar,
-                                  color: AppColors.orange,
-                                  size: 15,
-                                ),
-                              ),
-                            ],
-                          ),
+                        IconTextWidget(
+                          isIconRight: false,
+                          title: rating,
+                          icon: FontAwesomeIcons.solidStar,
+                          iconColor: Colors.amber,
                         ),
                       ],
                     ),
