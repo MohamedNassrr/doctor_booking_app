@@ -1,20 +1,32 @@
 import 'package:clinic_booking_app/core/themes/app_color.dart';
-import 'package:clinic_booking_app/core/utils/assets_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MedicalCenterListBody extends StatelessWidget {
-  const MedicalCenterListBody({super.key});
+  const MedicalCenterListBody({
+    super.key,
+    this.onPressed,
+    required this.image,
+    required this.clinicName,
+    required this.clinicLocation,
+    this.rating,
+    this.favOnPressed,
+  });
+
+  final Function()? onPressed;
+  final Function()? favOnPressed;
+  final String image;
+  final String clinicName;
+  final String clinicLocation;
+  final double? rating;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 232.w,
       child: InkWell(
-        onTap: () {
-          print('item card pressed');
-        },
+        onTap: onPressed,
         child: Card(
           elevation: 3,
           child: Column(
@@ -23,19 +35,18 @@ class MedicalCenterListBody extends StatelessWidget {
               Container(
                 width: double.infinity,
                 height: 121.h,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(8),
-                    topRight: Radius.circular(8),
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
+                  ),
+                  image: DecorationImage(
+                    image: NetworkImage(image),
+                    fit: BoxFit.contain,
                   ),
                 ),
                 child: Stack(
                   children: [
-                    const Image(
-                      width: double.infinity,
-                      image: AssetImage(AssetsData.testClinicImage),
-                      fit: BoxFit.contain,
-                    ),
                     Positioned(
                       top: 8,
                       right: 8,
@@ -47,9 +58,7 @@ class MedicalCenterListBody extends StatelessWidget {
                         ),
                         child: Center(
                           child: IconButton(
-                            onPressed: () {
-                              print('fav pressed');
-                            },
+                            onPressed: favOnPressed,
                             icon: const Icon(
                               FontAwesomeIcons.heart,
                               size: 16,
@@ -68,7 +77,7 @@ class MedicalCenterListBody extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Sunrise Health Clinic',
+                      clinicName.isEmpty ? ' ' : clinicName,
                       style: Theme.of(
                         context,
                       ).textTheme.bodySmall!.copyWith(color: AppColors.grey600),
@@ -87,7 +96,9 @@ class MedicalCenterListBody extends StatelessWidget {
                               ),
                               WidgetSpan(child: SizedBox(width: 3.w)),
                               TextSpan(
-                                text: "Nasr city",
+                                text: clinicLocation.isEmpty
+                                    ? ' '
+                                    : clinicLocation,
                                 style: Theme.of(context).textTheme.labelSmall,
                               ),
                             ],
@@ -97,7 +108,7 @@ class MedicalCenterListBody extends StatelessWidget {
                           text: TextSpan(
                             children: [
                               TextSpan(
-                                text: "5.5",
+                                text: "$rating",
                                 style: Theme.of(context).textTheme.labelSmall,
                               ),
                               WidgetSpan(child: SizedBox(width: 3.w)),

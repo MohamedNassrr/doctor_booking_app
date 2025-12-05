@@ -34,9 +34,24 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<ApisFailure, List<ClinicsModel>>> fetchClinics() {
-    // TODO: implement fetchClinics
-    throw UnimplementedError();
+  Future<Either<ApisFailure, List<ClinicsModel>>> fetchClinics() async {
+    try {
+      var data = await apiService.get(endPoint: ApiEndpoints.clinicEndPoint);
+      final List<ClinicsModel> clinics = [];
+      for (var clinic in data['clinics']) {
+        try {
+          clinics.add(ClinicsModel.fromJson(clinic));
+        } catch (e) {
+          clinics.add(ClinicsModel.fromJson(clinic));
+        }
+      }
+      return right(clinics);
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailures.fromDioError(e));
+      }
+      return left(ServerFailures(e.toString()));
+    }
   }
 
   @override
