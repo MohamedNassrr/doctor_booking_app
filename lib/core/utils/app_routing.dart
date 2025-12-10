@@ -8,6 +8,8 @@ import 'package:clinic_booking_app/features/auth/presentation/controller/user_cu
 import 'package:clinic_booking_app/features/auth/presentation/views/fill_profile_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/forget_pass_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/register_view.dart';
+import 'package:clinic_booking_app/features/home/data/repos/home_repos/home_repo_impl.dart';
+import 'package:clinic_booking_app/features/home/presentation/controller/doctors_cubit/doctors_cubit.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/home_view.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/category_view.dart';
 import 'package:clinic_booking_app/features/onboarding/presentation/views/onboaring_view.dart';
@@ -79,7 +81,11 @@ abstract class AppRouting {
       GoRoute(path: rHome, builder: (context, state) => const HomeView()),
       GoRoute(
         path: rCategories,
-        builder: (context, state) => const CategoryView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) =>
+              DoctorsCubit(getIt.get<HomeRepoImpl>())..getDoctors(),
+          child: const CategoryView(),
+        ),
       ),
     ],
   );

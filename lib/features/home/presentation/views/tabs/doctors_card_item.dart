@@ -10,15 +10,15 @@ class DoctorsCardItem extends StatelessWidget {
     required this.doctorName,
     required this.doctorSpecialist,
     required this.clinicName,
-    required this.onPressed,
-    required this.rating,
+    this.onPressed,
+    this.rating,
   });
   final String doctorImage;
   final String doctorName;
   final String doctorSpecialist;
   final String clinicName;
-  final Function() onPressed;
-  final double rating;
+  final Function()? onPressed;
+  final double? rating;
 
   @override
   Widget build(BuildContext context) {
@@ -51,10 +51,13 @@ class DoctorsCardItem extends StatelessWidget {
                   Row(
                     mainAxisAlignment: .spaceBetween,
                     children: [
-                      Text(
-                        doctorName,
-                        style: Theme.of(context).textTheme.displaySmall!
-                            .copyWith(color: AppColors.grey800),
+                      SizedBox(
+                        width: 110.w,
+                        child: Text(
+                          doctorName,
+                          style: Theme.of(context).textTheme.displaySmall!
+                              .copyWith(color: AppColors.grey800),
+                        ),
                       ),
                       const SizedBox(width: 13),
                       IconButton(

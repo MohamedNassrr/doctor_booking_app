@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
     ),
+    "all": MessageLookupByLibrary.simpleMessage("الكل"),
     "allDoctors": MessageLookupByLibrary.simpleMessage("جميع الأطباء"),
     "categories": MessageLookupByLibrary.simpleMessage("التصنيفات"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(

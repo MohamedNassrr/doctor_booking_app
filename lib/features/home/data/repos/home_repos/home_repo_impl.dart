@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:clinic_booking_app/core/errors/api_failure.dart';
 import 'package:clinic_booking_app/core/services/api_endpoints.dart';
 import 'package:clinic_booking_app/core/services/api_service.dart';
@@ -55,8 +57,25 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<ApisFailure, List<DoctorsModel>>> fetchDoctors() {
-    // TODO: implement fetchDoctors
-    throw UnimplementedError();
+  Future<Either<ApisFailure, List<DoctorsModel>>> fetchDoctors() async {
+    try {
+      var data = await apiService.get(endPoint: ApiEndpoints.doctorsEndPoint);
+      final List<DoctorsModel> doctors = [] ;
+      for (var doctor in data['doctors'] ) {
+        try {
+          doctors.add(DoctorsModel.fromJson(doctor));
+        } catch (e) {
+          doctors.add(DoctorsModel.fromJson(doctor));
+        }
+      }
+      return right(doctors);
+    } catch (e) {
+      if (e is DioException) {
+        log('dioException : ${ServerFailures.fromDioError(e)}}');
+        return left(ServerFailures.fromDioError(e));
+      }
+      log('failure in fetching : ${e.toString()}');
+      return left(ServerFailures(e.toString()));
+    }
   }
 }

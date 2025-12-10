@@ -1,4 +1,4 @@
-import 'package:clinic_booking_app/features/home/data/models/doctors_model.dart';
+import 'package:clinic_booking_app/features/home/data/models/doctors_details_model.dart';
 
 sealed class DoctorsStates {}
 
@@ -7,9 +7,9 @@ final class DoctorsInitialStates extends DoctorsStates {}
 final class DoctorsLoadingStates extends DoctorsStates {}
 
 final class DoctorsSuccessStates extends DoctorsStates {
-  final List<DoctorsModel> doctors;
+  final List<DoctorsDetailsModel> doctorsDetails;
 
-  DoctorsSuccessStates(this.doctors);
+  DoctorsSuccessStates(this.doctorsDetails);
 }
 
 final class DoctorsFailureStates extends DoctorsStates {

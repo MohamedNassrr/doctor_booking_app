@@ -40,6 +40,7 @@
   "medicalCenters": "Medical Centers",
   "allDoctors": "All Doctors",
   "founds": "founds",
-  "defaultSorting": "Default"
+  "defaultSorting": "Default",
+  "all": "All"
 
 }

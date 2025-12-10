@@ -26,7 +26,7 @@ class HomeViewBody extends StatelessWidget {
     final l10n = S.of(context);
     return BlocProvider(
       create: (context) =>
-          CategoryCubit(getIt.get<HomeRepoImpl>())..fetchCategories(),
+          CategoryCubit(getIt.get<HomeRepoImpl>())..getCategories(),
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(

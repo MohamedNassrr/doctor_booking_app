@@ -403,6 +403,11 @@ class S {
   String get defaultSorting {
     return Intl.message('Default', name: 'defaultSorting', desc: '', args: []);
   }
+
+  /// `All`
+  String get all {
+    return Intl.message('All', name: 'all', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
