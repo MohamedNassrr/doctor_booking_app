@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:clinic_booking_app/bloc_observer.dart';
 import 'package:clinic_booking_app/core/services/local_storage.dart';
 import 'package:clinic_booking_app/core/services/service_locator.dart';

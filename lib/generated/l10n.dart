@@ -394,6 +394,11 @@ class S {
     return Intl.message('All Doctors', name: 'allDoctors', desc: '', args: []);
   }
 
+  /// `Doctors`
+  String get Doctors {
+    return Intl.message('Doctors', name: 'Doctors', desc: '', args: []);
+  }
+
   /// `founds`
   String get founds {
     return Intl.message('founds', name: 'founds', desc: '', args: []);

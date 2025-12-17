@@ -60,8 +60,8 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<ApisFailure, List<DoctorsModel>>> fetchDoctors() async {
     try {
       var data = await apiService.get(endPoint: ApiEndpoints.doctorsEndPoint);
-      final List<DoctorsModel> doctors = [] ;
-      for (var doctor in data['doctors'] ) {
+      final List<DoctorsModel> doctors = [];
+      for (var doctor in data['doctors']) {
         try {
           doctors.add(DoctorsModel.fromJson(doctor));
         } catch (e) {
