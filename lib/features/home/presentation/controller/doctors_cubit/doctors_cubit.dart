@@ -1,9 +1,6 @@
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
-import 'package:clinic_booking_app/features/home/data/models/categories_model.dart';
-import 'package:clinic_booking_app/features/home/data/models/clinics_model.dart';
-import 'package:clinic_booking_app/features/home/data/models/doctors_details_model.dart';
 import 'package:clinic_booking_app/features/home/data/repos/home_repos/home_repo.dart';
 import 'package:clinic_booking_app/features/home/presentation/controller/doctors_cubit/doctors_state.dart';
 
@@ -14,46 +11,46 @@ class DoctorsCubit extends Cubit<DoctorsStates> {
 
   Future<void> getDoctors() async {
     emit(DoctorsLoadingStates());
-    var doctorResult = await homeRepo.fetchDoctors();
-    var clinicResult = await homeRepo.fetchClinics();
-    var specialistResult = await homeRepo.fetchCategories();
+    final doctors = await homeRepo.fetchDoctors();
+    final clinics = await homeRepo.fetchClinics();
+    final categories = await homeRepo.fetchCategories();
 
-    doctorResult.fold(
+    doctors.fold(
       (failure) {
-        log('doctors api failure: ${failure.errMessage.toString()}');
-        emit(DoctorsFailureStates(failure.errMessage));
+        log('failure in fetching doctors:${failure.errMessage.toString()}');
+        emit(DoctorsFailureStates(failure.errMessage.toString()));
       },
-      (doctorsList) {
-        clinicResult.fold(
+      (doctors) {
+        clinics.fold(
           (failure) {
-            log('clinics api failure: ${failure.errMessage.toString()}');
-            emit(DoctorsFailureStates(failure.errMessage));
+            log('failure in fetching doctors:${failure.errMessage.toString()}');
+            emit(DoctorsFailureStates(failure.errMessage.toString()));
           },
-          (clinicsList) {
-            specialistResult.fold(
+          (clinics) {
+            categories.fold(
               (failure) {
-                log('specialist api failure: ${failure.errMessage.toString()}');
-                emit(DoctorsFailureStates(failure.errMessage));
+                log(
+                  'failure in fetching doctors:${failure.errMessage.toString()}',
+                );
+                emit(DoctorsFailureStates(failure.errMessage.toString()));
               },
-              (categoryList) {
-                final clinicMapping = {for (var c in clinicsList) c.id: c};
-                final categoryMapping = {
-                  for (var cat in categoryList) cat.id: cat,
-                };
-                final doctorDetails = doctorsList.map((doctor) {
-                  final clinics =
-                      clinicMapping[doctor.clinicId] ??
-                      ClinicsModel(id: 0, name: 'unkown clinic');
-                  final categories =
-                      categoryMapping[doctor.categoryId] ??
-                      CategoriesModel(id: 0, name: 'unkown specialist');
-                  return DoctorsDetailsModel(
-                    doctor: doctor,
-                    clinic: clinics,
-                    category: categories,
-                  );
-                }).toList();
-                emit(DoctorsSuccessStates(doctorDetails));
+              (categories) async {
+                final mappedDoctors = await homeRepo.mapDoctorsDetails(
+                  doctors,
+                  clinics,
+                  categories,
+                );
+                mappedDoctors.fold(
+                  (failure) {
+                    log(
+                      'failure in fetching doctors:${failure.errMessage.toString()}',
+                    );
+                    emit(DoctorsFailureStates(failure.errMessage.toString()));
+                  },
+                  (mappedDoctors) {
+                    emit(DoctorsSuccessStates(mappedDoctors));
+                  },
+                );
               },
             );
           },

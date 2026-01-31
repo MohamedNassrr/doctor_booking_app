@@ -19,7 +19,7 @@ class MedicalCenterDetailsView extends StatelessWidget {
           ),
         ),
       ),
-      body: const MedicalCenterDetailsBody(),
+      body: const  MedicalCenterDetailsBody(),
     );
   }
 }

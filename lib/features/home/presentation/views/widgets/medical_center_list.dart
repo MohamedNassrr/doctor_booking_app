@@ -1,5 +1,6 @@
 import 'package:clinic_booking_app/core/services/service_locator.dart';
 import 'package:clinic_booking_app/core/themes/app_color.dart';
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/core/widgets/custom_error_widget.dart';
 import 'package:clinic_booking_app/features/home/data/repos/home_repos/home_repo_impl.dart';
 import 'package:clinic_booking_app/features/home/presentation/controller/clinics_cubit/clinics_cubit.dart';
@@ -9,6 +10,7 @@ import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class MedicalCenterList extends StatelessWidget {
@@ -51,19 +53,19 @@ class MedicalCenterList extends StatelessWidget {
                         return Skeletonizer(
                           enabled: loadingClinics,
                           child: const MedicalCenterListBody(
-                            image: "https://img.freepik.com/premium-vector/grey-gradient-abstract-background-gray-background_322958-3976.jpg?semt=ais_se_enriched&w=740&q=80",
+                            image:
+                                "https://img.freepik.com/premium-vector/grey-gradient-abstract-background-gray-background_322958-3976.jpg?semt=ais_se_enriched&w=740&q=80",
                             clinicName: '',
                             clinicLocation: '',
-                            
                           ),
                         );
                       } else if (successedClinics) {
                         return MedicalCenterListBody(
                           onPressed: () {
-                            print('clinic pressed');
-                          },
-                          favOnPressed: () {
-                            print('fav pressed');
+                            final clinic = state.clinic[index];
+                            GoRouter.of(
+                              context,
+                            ).push(AppRouting.rClinicDetails,extra: clinic);
                           },
                           image: "${state.clinic[index].image}",
                           clinicName: "${state.clinic[index].name}",

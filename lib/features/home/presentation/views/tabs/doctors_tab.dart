@@ -20,8 +20,8 @@ class DoctorsTab extends StatelessWidget {
         List<DoctorsDetailsModel> filteredDoctors = [];
         if (state is DoctorsSuccessStates) {
           filteredDoctors = categotyTab == 0
-              ? state.doctorsDetails
-              : state.doctorsDetails
+              ? state.mappedDoctors
+              : state.mappedDoctors
                     .where((cat) => cat.category.id == categotyTab)
                     .toList();
         }

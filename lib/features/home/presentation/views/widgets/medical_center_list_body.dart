@@ -46,31 +46,6 @@ class MedicalCenterListBody extends StatelessWidget {
                     fit: BoxFit.contain,
                   ),
                 ),
-                child: Stack(
-                  children: [
-                    Positioned(
-                      top: 8,
-                      right: 8,
-                      child: Container(
-                        width: 30.w,
-                        decoration: const BoxDecoration(
-                          color: AppColors.transparentGray,
-                          shape: BoxShape.circle,
-                        ),
-                        child: Center(
-                          child: IconButton(
-                            onPressed: favOnPressed,
-                            icon: const Icon(
-                              FontAwesomeIcons.heart,
-                              size: 16,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),

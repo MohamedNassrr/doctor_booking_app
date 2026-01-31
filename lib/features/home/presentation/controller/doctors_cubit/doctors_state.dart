@@ -7,9 +7,9 @@ final class DoctorsInitialStates extends DoctorsStates {}
 final class DoctorsLoadingStates extends DoctorsStates {}
 
 final class DoctorsSuccessStates extends DoctorsStates {
-  final List<DoctorsDetailsModel> doctorsDetails;
+  final List<DoctorsDetailsModel> mappedDoctors;
 
-  DoctorsSuccessStates(this.doctorsDetails);
+  DoctorsSuccessStates(this.mappedDoctors);
 }
 
 final class DoctorsFailureStates extends DoctorsStates {
