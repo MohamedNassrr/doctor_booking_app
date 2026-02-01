@@ -18,7 +18,6 @@ class MedicalCenterDetailsBody extends StatelessWidget {
     return BlocBuilder<DoctorsCubit, DoctorsStates>(
       builder: (context, state) {
         if (state is DoctorsSuccessStates) {
-          //search this in google!!!
           List<DoctorsDetailsModel> filteredDoctors = [];
           final ClinicsModel clinic =
               GoRouterState.of(context).extra as ClinicsModel;
