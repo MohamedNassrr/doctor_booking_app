@@ -23,7 +23,7 @@ class CategoriesViewBody extends StatefulWidget {
 }
 
 class _CategoriesViewBodyState extends State<CategoriesViewBody>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   List<CategoriesModel> categoryList = [];
   TabController? _tabController;
   late int initialTabIndex;
