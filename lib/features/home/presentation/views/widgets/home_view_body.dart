@@ -81,6 +81,12 @@ class HomeViewBody extends StatelessWidget {
                     );
                   } else if (state is CategorySuccessStates) {
                     return CategoriesGridList(
+                      catPressed: () {
+                        final tabIndex = index + 1;
+                        GoRouter.of(
+                          context,
+                        ).push(AppRouting.rCategories, extra: tabIndex);
+                      },
                       categoryImage: Constants.categoryIcon[index],
                       title: '${state.categoryModel[index].name}',
                       bgColor: Constants.categoryColor[index],

@@ -35,7 +35,9 @@ class DoctorsTab extends StatelessWidget {
               sliver: SliverToBoxAdapter(
                 child: DoctorsSortingWidget(
                   doctorsNumberFound: "${filteredDoctors.length}",
-                  onTap: () {},
+                  onTap: () {
+                    print('default pressed');
+                  },
                 ),
               ),
             ),
@@ -57,14 +59,18 @@ class DoctorsTab extends StatelessWidget {
                   } else if (state is DoctorsSuccessStates) {
                     final doctorsSuccess = filteredDoctors[index];
                     return InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        print('card pressed');
+                      },
                       child: DoctorsCardItem(
                         doctorImage: "${doctorsSuccess.doctor.image}",
                         doctorName: "${doctorsSuccess.doctor.name}",
                         doctorSpecialist: "${doctorsSuccess.category.name}",
                         clinicName: "${doctorsSuccess.clinic.name}",
                         rating: doctorsSuccess.doctor.rating,
-                        onPressed: () {},
+                        onPressed: () {
+                          print("fav pressed");
+                        },
                       ),
                     );
                   } else {

@@ -7,7 +7,7 @@ class DoctorBookingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(child: Text('Doctor Booking Screen')),
+      body: const Center(child: Text('Doctor Booking Screen')),
     );
   }
 }

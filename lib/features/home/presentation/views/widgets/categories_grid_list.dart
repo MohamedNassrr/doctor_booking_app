@@ -8,18 +8,20 @@ class CategoriesGridList extends StatelessWidget {
     required this.categoryImage,
     required this.title,
     required this.bgColor,
+     this.catPressed,
   });
 
   final String categoryImage;
   final String title;
   final Color bgColor;
+  final Function()? catPressed;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: catPressed,
           child: Container(
             width: 57.w,
             height: 57.h,

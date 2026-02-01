@@ -12,6 +12,7 @@ import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 
 class CategoriesViewBody extends StatefulWidget {
@@ -24,7 +25,14 @@ class CategoriesViewBody extends StatefulWidget {
 class _CategoriesViewBodyState extends State<CategoriesViewBody>
     with SingleTickerProviderStateMixin {
   List<CategoriesModel> categoryList = [];
-  late TabController _tabController;
+  TabController? _tabController;
+  late int initialTabIndex;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    initialTabIndex = GoRouterState.of(context).extra as int? ?? 0;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +53,11 @@ class _CategoriesViewBodyState extends State<CategoriesViewBody>
               CategoriesModel(id: 0, name: "All"),
               ...state.categoryModel,
             ];
+            _tabController?.dispose();
             _tabController = TabController(
               length: categoryList.length,
               vsync: this,
+              initialIndex: initialTabIndex,
             );
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
