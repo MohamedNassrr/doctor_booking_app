@@ -25,8 +25,8 @@ class SocialAuth extends StatelessWidget {
         listener: (context, state) {
           if (state is GoogleSignInSuccessState ||
               state is FacebookSignInSuccessState) {
-                 GoRouter.of(context).pushReplacement(AppRouting.rHome);
-              }
+            GoRouter.of(context).pushReplacement(AppRouting.rHome);
+          }
         },
         builder: (context, state) {
           var socialAuthCubit = context.read<SocialAuthCubit>();

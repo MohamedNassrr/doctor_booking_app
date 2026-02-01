@@ -13,8 +13,8 @@ class SkipButton extends StatelessWidget {
       style: ButtonStyle(
         overlayColor: WidgetStateProperty.all(AppColors.grey500),
       ),
-      onPressed: () async{
-         await LocalStorage.setData(key: 'onBoarding', value: true);
+      onPressed: () async {
+        await LocalStorage.setData(key: 'onBoarding', value: true);
         GoRouter.of(context).pushReplacement(AppRouting.rLogin);
       },
       child: Text(

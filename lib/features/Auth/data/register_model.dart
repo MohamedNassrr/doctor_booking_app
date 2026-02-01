@@ -1,4 +1,3 @@
-
 import 'package:clinic_booking_app/core/utils/assets_data.dart';
 
 class RegisterModel {

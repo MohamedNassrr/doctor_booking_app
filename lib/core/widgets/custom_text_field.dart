@@ -14,6 +14,10 @@ class CustomTextField extends StatelessWidget {
     this.prefix,
     this.isEnabled = true,
     this.onTap,
+    this.isFilled = false,
+    this.fillColor,
+    this.borderColor = AppColors.grey300,
+    this.prefixSize = 15,
   });
 
   final String hintText;
@@ -26,6 +30,10 @@ class CustomTextField extends StatelessWidget {
   final TextStyle? hintStyle;
   final bool isPassword;
   final bool isEnabled;
+  final bool? isFilled;
+  final Color? fillColor;
+  final Color borderColor;
+  final double? prefixSize;
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +45,15 @@ class CustomTextField extends StatelessWidget {
         obscureText: isPassword,
         decoration: InputDecoration(
           enabled: isEnabled,
+          filled: isFilled,
+          fillColor: fillColor,
           contentPadding: const EdgeInsets.all(23),
           focusedBorder: buildOutlineInputBorder(),
           border: buildOutlineInputBorder(),
           disabledBorder: buildOutlineInputBorder(),
           enabledBorder: buildOutlineInputBorder(),
           hintText: hintText,
-          prefixIcon: Icon(prefix, color: AppColors.grey400, size: 15),
+          prefixIcon: Icon(prefix, color: AppColors.grey400, size: prefixSize),
           hintStyle: Theme.of(
             context,
           ).textTheme.labelSmall!.copyWith(color: AppColors.grey400),
@@ -57,7 +67,7 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-      borderSide: const BorderSide(color: AppColors.grey300),
+      borderSide: BorderSide(color: borderColor),
       borderRadius: BorderRadius.circular(radius),
     );
   }

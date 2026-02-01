@@ -23,7 +23,6 @@ class _RegisterViewBodyState extends State<RegisterViewBody> {
   final TextEditingController passwordController = TextEditingController();
   var formKey = GlobalKey<FormState>();
 
-  
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

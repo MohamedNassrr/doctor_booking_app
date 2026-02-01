@@ -19,7 +19,7 @@ class CustomTextButton extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 45.h,
-      decoration:  const BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppColors.mainColor,
         borderRadius: BorderRadius.all(Radius.circular(63)),
       ),
@@ -31,7 +31,9 @@ class CustomTextButton extends StatelessWidget {
               )
             : Text(
                 title,
-                style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: Colors.white),
+                style: Theme.of(
+                  context,
+                ).textTheme.headlineSmall!.copyWith(color: Colors.white),
               ),
       ),
     );

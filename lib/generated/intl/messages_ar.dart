@@ -22,15 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Doctors": MessageLookupByLibrary.simpleMessage("الأطباء"),
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
     ),
+    "all": MessageLookupByLibrary.simpleMessage("الكل"),
+    "allDoctors": MessageLookupByLibrary.simpleMessage("جميع الأطباء"),
+    "categories": MessageLookupByLibrary.simpleMessage("التصنيفات"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "يرجى اختيار تاريخ ميلادك.",
     ),
     "congratulations": MessageLookupByLibrary.simpleMessage("تهانينا!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
+    "defaultSorting": MessageLookupByLibrary.simpleMessage("افتراضي"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب بعد؟",
@@ -58,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fillYourProfile": MessageLookupByLibrary.simpleMessage("أكمل ملفك الشخصي"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "founds": MessageLookupByLibrary.simpleMessage("نتيجه"),
     "gender": MessageLookupByLibrary.simpleMessage("النوع"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage(
       "مرحباً، أهلاً بعودتك",
@@ -65,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
       "نأمل أن تكون بخير.",
     ),
+    "medicalCenters": MessageLookupByLibrary.simpleMessage("المراكز الطبية"),
     "or": MessageLookupByLibrary.simpleMessage("أو"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
@@ -80,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
     ),
     "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+    "searchDoctor": MessageLookupByLibrary.simpleMessage("ابحث عن طبيب..."),
+    "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
     "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الرمز"),
     "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(

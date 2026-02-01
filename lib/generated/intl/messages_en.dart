@@ -22,15 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
     ),
+    "all": MessageLookupByLibrary.simpleMessage("All"),
+    "allDoctors": MessageLookupByLibrary.simpleMessage("All Doctors"),
+    "categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "Please choose your birth date.",
     ),
     "congratulations": MessageLookupByLibrary.simpleMessage("Congratulations!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("Date of Birth"),
+    "defaultSorting": MessageLookupByLibrary.simpleMessage("Default"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
@@ -62,11 +67,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Fill Your Profile",
     ),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("Forget Password?"),
+    "founds": MessageLookupByLibrary.simpleMessage("founds"),
     "gender": MessageLookupByLibrary.simpleMessage("Gender"),
     "hiWelcomeBack": MessageLookupByLibrary.simpleMessage("Hi, Welcome Back!"),
     "hopeYouAreDoingFine": MessageLookupByLibrary.simpleMessage(
       "Hope you\'re doing fine.",
     ),
+    "medicalCenters": MessageLookupByLibrary.simpleMessage("Medical Centers"),
     "or": MessageLookupByLibrary.simpleMessage("Or"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordCantBeEmpty": MessageLookupByLibrary.simpleMessage(
@@ -82,6 +89,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "A reset code has been sent to your email.",
     ),
     "save": MessageLookupByLibrary.simpleMessage("Save"),
+    "searchDoctor": MessageLookupByLibrary.simpleMessage(
+      "Search for a doctor...",
+    ),
+    "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(

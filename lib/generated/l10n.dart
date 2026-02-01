@@ -358,6 +358,61 @@ class S {
       args: [],
     );
   }
+
+  /// `Search for a doctor...`
+  String get searchDoctor {
+    return Intl.message(
+      'Search for a doctor...',
+      name: 'searchDoctor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories {
+    return Intl.message('Categories', name: 'categories', desc: '', args: []);
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message('See All', name: 'seeAll', desc: '', args: []);
+  }
+
+  /// `Medical Centers`
+  String get medicalCenters {
+    return Intl.message(
+      'Medical Centers',
+      name: 'medicalCenters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Doctors`
+  String get allDoctors {
+    return Intl.message('All Doctors', name: 'allDoctors', desc: '', args: []);
+  }
+
+  /// `Doctors`
+  String get Doctors {
+    return Intl.message('Doctors', name: 'Doctors', desc: '', args: []);
+  }
+
+  /// `founds`
+  String get founds {
+    return Intl.message('founds', name: 'founds', desc: '', args: []);
+  }
+
+  /// `Default`
+  String get defaultSorting {
+    return Intl.message('Default', name: 'defaultSorting', desc: '', args: []);
+  }
+
+  /// `All`
+  String get all {
+    return Intl.message('All', name: 'all', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

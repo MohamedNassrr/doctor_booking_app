@@ -20,5 +20,4 @@ final class CreateUserRegisterFailureStates extends RegisterStates {
   CreateUserRegisterFailureStates(this.failure);
 }
 
-
 final class ChangePasswordVisibilityState extends RegisterStates {}
