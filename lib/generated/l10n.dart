@@ -413,6 +413,41 @@ class S {
   String get all {
     return Intl.message('All', name: 'all', desc: '', args: []);
   }
+
+  /// `Doctor Details`
+  String get doctorDetails {
+    return Intl.message(
+      'Doctor Details',
+      name: 'doctorDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About me`
+  String get aboutMe {
+    return Intl.message('About me', name: 'aboutMe', desc: '', args: []);
+  }
+
+  /// `rating`
+  String get rating {
+    return Intl.message('rating', name: 'rating', desc: '', args: []);
+  }
+
+  /// `experience`
+  String get experience {
+    return Intl.message('experience', name: 'experience', desc: '', args: []);
+  }
+
+  /// `Book appointment`
+  String get bookAppointment {
+    return Intl.message(
+      'Book appointment',
+      name: 'bookAppointment',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

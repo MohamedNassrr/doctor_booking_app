@@ -42,5 +42,11 @@
   "Doctors": "الأطباء",
   "founds": "نتيجه",
   "defaultSorting": "افتراضي",
-  "all": "الكل"
+  "all": "الكل",
+  "doctorDetails": "تفاصيل الطبيب",
+  "aboutMe": "نبذة عني",
+  "rating": "التقييم",
+  "experience": "الخبرة",
+  "bookAppointment": "احجز موعد"
+
 }

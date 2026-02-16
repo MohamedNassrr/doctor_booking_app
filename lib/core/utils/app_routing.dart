@@ -8,6 +8,7 @@ import 'package:clinic_booking_app/features/auth/presentation/controller/user_cu
 import 'package:clinic_booking_app/features/auth/presentation/views/fill_profile_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/forget_pass_view.dart';
 import 'package:clinic_booking_app/features/auth/presentation/views/register_view.dart';
+import 'package:clinic_booking_app/features/doctor_details/presentation/views/doctor_details_view.dart';
 import 'package:clinic_booking_app/features/home/data/repos/home_repos/home_repo_impl.dart';
 import 'package:clinic_booking_app/features/home/presentation/controller/doctors_cubit/doctors_cubit.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/category_view.dart';
@@ -27,6 +28,7 @@ abstract class AppRouting {
   static const rFillProfile = '/FillProfileView';
   static const rHome = '/Home';
   static const rCategories = '/CategoryView';
+  static const rDoctorDetails = '/DoctorDetailsView';
   static const rClinicDetails = '/MedicalCenterDetailsView';
 
   static final router = GoRouter(
@@ -96,6 +98,10 @@ abstract class AppRouting {
               DoctorsCubit(getIt.get<HomeRepoImpl>())..getDoctors(),
           child: const MedicalCenterDetailsView(),
         ),
+      ),
+       GoRoute(
+        path: rDoctorDetails,
+        builder: (context, state) => const DoctorDetailsView(),
       ),
     ],
   );

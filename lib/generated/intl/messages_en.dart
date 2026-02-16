@@ -23,11 +23,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
+    "aboutMe": MessageLookupByLibrary.simpleMessage("About me"),
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
     ),
     "all": MessageLookupByLibrary.simpleMessage("All"),
     "allDoctors": MessageLookupByLibrary.simpleMessage("All Doctors"),
+    "bookAppointment": MessageLookupByLibrary.simpleMessage("Book appointment"),
     "categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "Please choose your birth date.",
@@ -39,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
+    "doctorDetails": MessageLookupByLibrary.simpleMessage("Doctor Details"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
     ),
@@ -63,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_wrong_password": MessageLookupByLibrary.simpleMessage(
       "Wrong password provided.",
     ),
+    "experience": MessageLookupByLibrary.simpleMessage("experience"),
     "fillYourProfile": MessageLookupByLibrary.simpleMessage(
       "Fill Your Profile",
     ),
@@ -85,6 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email",
     ),
+    "rating": MessageLookupByLibrary.simpleMessage("rating"),
     "resetCodeSent": MessageLookupByLibrary.simpleMessage(
       "A reset code has been sent to your email.",
     ),

@@ -1,3 +1,4 @@
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/core/utils/assets_data.dart';
 import 'package:clinic_booking_app/core/widgets/custom_error_widget.dart';
 import 'package:clinic_booking_app/features/home/data/models/clinics_model.dart';
@@ -32,6 +33,9 @@ class MedicalCenterDetailsBody extends StatelessWidget {
             itemBuilder: (context, index) {
               final clinicDoctors = filteredDoctors[index];
               return ClinicsDoctorItem(
+                docPressed: () {
+                  GoRouter.of(context).push(AppRouting.rDoctorDetails);
+                },
                 image: '${clinicDoctors.doctor.image}',
                 doctorName: '${clinicDoctors.doctor.name}',
                 doctorSpecialist: '${clinicDoctors.category.name}',

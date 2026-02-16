@@ -12,6 +12,7 @@ class ClinicsDoctorItem extends StatelessWidget {
     required this.doctorSpecialist,
     required this.rating,
     this.favPressed,
+    this.docPressed,
   });
 
   final String image;
@@ -19,6 +20,7 @@ class ClinicsDoctorItem extends StatelessWidget {
   final String doctorSpecialist;
   final dynamic rating;
   final Function()? favPressed;
+  final Function()? docPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -26,64 +28,72 @@ class ClinicsDoctorItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: Column(
         children: [
-          SizedBox(
-            width: double.infinity,
-            height: 140.h,
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 5,
-              child: Padding(
-                padding: const .all(12.0),
-                child: Row(
-                  spacing: 12,
-                  crossAxisAlignment: .start,
-                  children: [
-                    Container(
-                      width: 109.w,
-                      height: 109.h,
-                      decoration: BoxDecoration(
-                        borderRadius: const .all(Radius.circular(12)),
-                        image: DecorationImage(
-                          image: NetworkImage(image),
-                          fit: .cover,
+          InkWell(
+            onTap: docPressed,
+            child: SizedBox(
+              width: double.infinity,
+              height: 140.h,
+              child: Card(
+                clipBehavior: Clip.antiAlias,
+                elevation: 5,
+                child: Padding(
+                  padding: const .all(12.0),
+                  child: Row(
+                    spacing: 12,
+                    crossAxisAlignment: .start,
+                    children: [
+                      Container(
+                        width: 109.w,
+                        height: 109.h,
+                        decoration: BoxDecoration(
+                          borderRadius: const .all(Radius.circular(12)),
+                          image: DecorationImage(
+                            image: NetworkImage(image),
+                            fit: .cover,
+                          ),
                         ),
                       ),
-                    ),
-                    Column(
-                      crossAxisAlignment: .start,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 110.w,
-                              child: Text(
-                                doctorName,
-                                style: Theme.of(context).textTheme.displaySmall!
-                                    .copyWith(color: AppColors.grey800),
+                      Column(
+                        crossAxisAlignment: .start,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 110.w,
+                                child: Text(
+                                  doctorName,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .displaySmall!
+                                      .copyWith(color: AppColors.grey800),
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 23.w),
-                            IconButton(
-                              onPressed: favPressed,
-                              icon: const Icon(FontAwesomeIcons.heart),
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 180.w, child: const Divider(height: 8)),
-                        Text(
-                          doctorSpecialist,
-                          style: Theme.of(context).textTheme.labelLarge!
-                              .copyWith(color: AppColors.grey600),
-                        ),
-                        const Spacer(),
-                        IconTextWidget(
-                          title: rating,
-                          icon: FontAwesomeIcons.solidStar,
-                          iconColor: Colors.amber,
-                        ),
-                      ],
-                    ),
-                  ],
+                              SizedBox(width: 23.w),
+                              IconButton(
+                                onPressed: favPressed,
+                                icon: const Icon(FontAwesomeIcons.heart),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 180.w,
+                            child: const Divider(height: 8),
+                          ),
+                          Text(
+                            doctorSpecialist,
+                            style: Theme.of(context).textTheme.labelLarge!
+                                .copyWith(color: AppColors.grey600),
+                          ),
+                          const Spacer(),
+                          IconTextWidget(
+                            title: rating,
+                            icon: FontAwesomeIcons.solidStar,
+                            iconColor: Colors.amber,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

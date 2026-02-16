@@ -42,6 +42,11 @@
   "Doctors": "Doctors",
   "founds": "founds",
   "defaultSorting": "Default",
-  "all": "All"
+  "all": "All",
+  "doctorDetails": "Doctor Details",
+  "aboutMe": "About me",
+  "rating": "rating",
+  "experience": "experience",
+  "bookAppointment": "Book appointment"
 
 }
