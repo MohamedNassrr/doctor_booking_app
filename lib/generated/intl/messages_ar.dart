@@ -23,11 +23,13 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Doctors": MessageLookupByLibrary.simpleMessage("الأطباء"),
+    "aboutMe": MessageLookupByLibrary.simpleMessage("نبذة عني"),
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "حسابك جاهز للاستخدام. سيتم توجيهك إلى الصفحة الرئيسية خلال ثوانٍ...",
     ),
     "all": MessageLookupByLibrary.simpleMessage("الكل"),
     "allDoctors": MessageLookupByLibrary.simpleMessage("جميع الأطباء"),
+    "bookAppointment": MessageLookupByLibrary.simpleMessage("احجز موعد"),
     "categories": MessageLookupByLibrary.simpleMessage("التصنيفات"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "يرجى اختيار تاريخ ميلادك.",
@@ -37,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
     "defaultSorting": MessageLookupByLibrary.simpleMessage("افتراضي"),
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
+    "doctorDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطبيب"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب بعد؟",
     ),
@@ -61,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_wrong_password": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور غير صحيحة.",
     ),
+    "experience": MessageLookupByLibrary.simpleMessage("الخبرة"),
     "fillYourProfile": MessageLookupByLibrary.simpleMessage("أكمل ملفك الشخصي"),
     "forgetPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "founds": MessageLookupByLibrary.simpleMessage("نتيجه"),
@@ -83,6 +87,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "يرجى إدخال بريد إلكتروني صحيح",
     ),
+    "rating": MessageLookupByLibrary.simpleMessage("التقييم"),
     "resetCodeSent": MessageLookupByLibrary.simpleMessage(
       "تم إرسال رمز إعادة التعيين إلى بريدك الإلكتروني.",
     ),

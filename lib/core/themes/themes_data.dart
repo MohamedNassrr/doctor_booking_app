@@ -1,4 +1,5 @@
 import 'package:clinic_booking_app/core/themes/custom_themes/bottom_nav_bar_theme.dart';
+import 'package:clinic_booking_app/core/themes/custom_themes/custom_calender_theme.dart';
 import 'package:clinic_booking_app/core/themes/custom_themes/custom_text_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ class AppTheme {
     brightness: Brightness.light,
     textTheme: CustomTextTheme.lightTextTheme,
     bottomNavigationBarTheme: BottomNavTheme.lightBotNavBar,
+    datePickerTheme: CustomCalenderTheme.lightCalender,
   );
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,

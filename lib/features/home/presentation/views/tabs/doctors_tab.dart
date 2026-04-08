@@ -1,3 +1,4 @@
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/core/widgets/custom_error_widget.dart';
 import 'package:clinic_booking_app/core/widgets/doctors_sorting_widget.dart';
 import 'package:clinic_booking_app/features/home/data/models/doctors_details_model.dart';
@@ -6,6 +7,7 @@ import 'package:clinic_booking_app/features/home/presentation/controller/doctors
 import 'package:clinic_booking_app/features/home/presentation/views/tabs/doctors_card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
 class DoctorsTab extends StatelessWidget {
@@ -25,6 +27,7 @@ class DoctorsTab extends StatelessWidget {
                     .where((cat) => cat.category.id == categotyTab)
                     .toList();
         }
+        
         if (state is DoctorsFailureStates) {
           return CustomErrorWidget(errorMessage: state.failure.toString());
         }
@@ -60,7 +63,7 @@ class DoctorsTab extends StatelessWidget {
                     final doctorsSuccess = filteredDoctors[index];
                     return InkWell(
                       onTap: () {
-                        print('card pressed');
+                       GoRouter.of(context).push(AppRouting.rDoctorDetails,extra: doctorsSuccess.doctor.id);
                       },
                       child: DoctorsCardItem(
                         doctorImage: "${doctorsSuccess.doctor.image}",

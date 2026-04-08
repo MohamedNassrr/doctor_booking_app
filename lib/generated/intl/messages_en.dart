@@ -23,15 +23,18 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "Doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
+    "aboutMe": MessageLookupByLibrary.simpleMessage("About me"),
     "accountReady": MessageLookupByLibrary.simpleMessage(
       "Your account is ready to use. You will be redirected to the Home Page in a few seconds...",
     ),
     "all": MessageLookupByLibrary.simpleMessage("All"),
     "allDoctors": MessageLookupByLibrary.simpleMessage("All Doctors"),
+    "bookAppointment": MessageLookupByLibrary.simpleMessage("Book appointment"),
     "categories": MessageLookupByLibrary.simpleMessage("Categories"),
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "Please choose your birth date.",
     ),
+    "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "congratulations": MessageLookupByLibrary.simpleMessage("Congratulations!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("Date of Birth"),
@@ -39,8 +42,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "doYouHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Do you have an account?",
     ),
+    "doctorDetails": MessageLookupByLibrary.simpleMessage("Doctor Details"),
+    "done": MessageLookupByLibrary.simpleMessage("done"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
+    ),
+    "edityourappointment": MessageLookupByLibrary.simpleMessage(
+      "Edit your appointment",
     ),
     "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
       "Email can\'t be empty",
@@ -63,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_wrong_password": MessageLookupByLibrary.simpleMessage(
       "Wrong password provided.",
     ),
+    "experience": MessageLookupByLibrary.simpleMessage("experience"),
     "fillYourProfile": MessageLookupByLibrary.simpleMessage(
       "Fill Your Profile",
     ),
@@ -85,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterValidEmail": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid email",
     ),
+    "rating": MessageLookupByLibrary.simpleMessage("rating"),
     "resetCodeSent": MessageLookupByLibrary.simpleMessage(
       "A reset code has been sent to your email.",
     ),
@@ -93,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Search for a doctor...",
     ),
     "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+    "selectDate": MessageLookupByLibrary.simpleMessage("Select Date"),
+    "selectHour": MessageLookupByLibrary.simpleMessage("Select Hour"),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(

@@ -46,7 +46,7 @@ class CustomTextTheme {
     bodySmall: TextStyle(
       fontSize: 14.sp,
       fontFamily: 'Inter',
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w600,
       height: 1.5,
     ),
 

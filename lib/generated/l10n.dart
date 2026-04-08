@@ -413,6 +413,71 @@ class S {
   String get all {
     return Intl.message('All', name: 'all', desc: '', args: []);
   }
+
+  /// `Doctor Details`
+  String get doctorDetails {
+    return Intl.message(
+      'Doctor Details',
+      name: 'doctorDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `About me`
+  String get aboutMe {
+    return Intl.message('About me', name: 'aboutMe', desc: '', args: []);
+  }
+
+  /// `rating`
+  String get rating {
+    return Intl.message('rating', name: 'rating', desc: '', args: []);
+  }
+
+  /// `experience`
+  String get experience {
+    return Intl.message('experience', name: 'experience', desc: '', args: []);
+  }
+
+  /// `Book appointment`
+  String get bookAppointment {
+    return Intl.message(
+      'Book appointment',
+      name: 'bookAppointment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Date`
+  String get selectDate {
+    return Intl.message('Select Date', name: 'selectDate', desc: '', args: []);
+  }
+
+  /// `Select Hour`
+  String get selectHour {
+    return Intl.message('Select Hour', name: 'selectHour', desc: '', args: []);
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `done`
+  String get done {
+    return Intl.message('done', name: 'done', desc: '', args: []);
+  }
+
+  /// `Edit your appointment`
+  String get edityourappointment {
+    return Intl.message(
+      'Edit your appointment',
+      name: 'edityourappointment',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

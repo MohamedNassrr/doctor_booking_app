@@ -1,7 +1,7 @@
+import 'package:clinic_booking_app/core/utils/app_routing.dart';
 import 'package:clinic_booking_app/core/utils/assets_data.dart';
 import 'package:clinic_booking_app/core/widgets/custom_error_widget.dart';
 import 'package:clinic_booking_app/features/home/data/models/clinics_model.dart';
-import 'package:clinic_booking_app/features/home/data/models/doctors_details_model.dart';
 import 'package:clinic_booking_app/features/home/presentation/controller/doctors_cubit/doctors_cubit.dart';
 import 'package:clinic_booking_app/features/home/presentation/controller/doctors_cubit/doctors_state.dart';
 import 'package:clinic_booking_app/features/home/presentation/views/widgets/clinics_doctor_item.dart';
@@ -18,20 +18,20 @@ class MedicalCenterDetailsBody extends StatelessWidget {
     return BlocBuilder<DoctorsCubit, DoctorsStates>(
       builder: (context, state) {
         if (state is DoctorsSuccessStates) {
-          List<DoctorsDetailsModel> filteredDoctors = [];
-          final ClinicsModel clinic =
+          final clinic =
               GoRouterState.of(context).extra as ClinicsModel;
-          final clinicId = clinic.id;
-          filteredDoctors = clinicId == 0
-              ? state.mappedDoctors
-              : state.mappedDoctors
-                    .where((doctor) => doctor.clinic.id == clinicId)
-                    .toList();
+         final doctors = context.read<DoctorsCubit>().getDoctorsByClinic(clinic.id!);
           return ListView.builder(
-            itemCount: filteredDoctors.length,
+            itemCount: doctors.length,
             itemBuilder: (context, index) {
-              final clinicDoctors = filteredDoctors[index];
+              final clinicDoctors = doctors[index];
               return ClinicsDoctorItem(
+                docPressed: () {
+                  GoRouter.of(context).push(
+                    AppRouting.rDoctorDetails,
+                    extra: clinicDoctors.doctor.id,
+                  );
+                },
                 image: '${clinicDoctors.doctor.image}',
                 doctorName: '${clinicDoctors.doctor.name}',
                 doctorSpecialist: '${clinicDoctors.category.name}',
