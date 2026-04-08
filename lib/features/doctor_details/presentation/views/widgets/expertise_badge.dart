@@ -1,10 +1,13 @@
 import 'package:clinic_booking_app/core/themes/app_color.dart';
+import 'package:clinic_booking_app/features/home/data/models/doctors_details_model.dart';
 import 'package:clinic_booking_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ExpertiseBadge extends StatelessWidget {
-  const ExpertiseBadge({super.key});
+  const ExpertiseBadge({super.key, required this.doctorDetails});
+
+  final DoctorsDetailsModel doctorDetails;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +25,7 @@ class ExpertiseBadge extends StatelessWidget {
                 child: Icon(FontAwesomeIcons.award, color: AppColors.mainColor),
               ),
               Text(
-                '10+',
+                '${doctorDetails.doctor.experience}',
                 style: Theme.of(
                   context,
                 ).textTheme.bodySmall!.copyWith(color: AppColors.grey600),
@@ -48,7 +51,7 @@ class ExpertiseBadge extends StatelessWidget {
               ),
             ),
             Text(
-              '5',
+              '${doctorDetails.doctor.rating}',
               style: Theme.of(
                 context,
               ).textTheme.bodySmall!.copyWith(color: AppColors.grey600),

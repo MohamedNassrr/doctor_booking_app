@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chooseBirthDate": MessageLookupByLibrary.simpleMessage(
       "Please choose your birth date.",
     ),
+    "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "congratulations": MessageLookupByLibrary.simpleMessage("Congratulations!"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create Account"),
     "dateOfBirth": MessageLookupByLibrary.simpleMessage("Date of Birth"),
@@ -42,8 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Do you have an account?",
     ),
     "doctorDetails": MessageLookupByLibrary.simpleMessage("Doctor Details"),
+    "done": MessageLookupByLibrary.simpleMessage("done"),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account yet?",
+    ),
+    "edityourappointment": MessageLookupByLibrary.simpleMessage(
+      "Edit your appointment",
     ),
     "emailCantBeEmpty": MessageLookupByLibrary.simpleMessage(
       "Email can\'t be empty",
@@ -98,6 +103,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "Search for a doctor...",
     ),
     "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+    "selectDate": MessageLookupByLibrary.simpleMessage("Select Date"),
+    "selectHour": MessageLookupByLibrary.simpleMessage("Select Hour"),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
     "signInWithFacebook": MessageLookupByLibrary.simpleMessage(

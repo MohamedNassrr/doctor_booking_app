@@ -47,6 +47,10 @@
   "aboutMe": "About me",
   "rating": "rating",
   "experience": "experience",
-  "bookAppointment": "Book appointment"
-
+  "bookAppointment": "Book appointment",
+  "selectDate": "Select Date",
+  "selectHour": "Select Hour",
+  "confirm": "Confirm",
+  "done": "done",
+  "edityourappointment": "Edit your appointment"
 }

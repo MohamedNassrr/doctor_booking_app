@@ -21,7 +21,7 @@ class _ExpandedTextState extends State<ExpandedText> {
         ConstrainedBox(
           constraints: widget.isExpanded
               ? const BoxConstraints()
-              : BoxConstraints(maxHeight: 60.h),
+              : BoxConstraints(maxHeight: 80.h),
           child: Text(
             widget.text,
             softWrap: true,

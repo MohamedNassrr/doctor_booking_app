@@ -448,6 +448,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Select Date`
+  String get selectDate {
+    return Intl.message('Select Date', name: 'selectDate', desc: '', args: []);
+  }
+
+  /// `Select Hour`
+  String get selectHour {
+    return Intl.message('Select Hour', name: 'selectHour', desc: '', args: []);
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `done`
+  String get done {
+    return Intl.message('done', name: 'done', desc: '', args: []);
+  }
+
+  /// `Edit your appointment`
+  String get edityourappointment {
+    return Intl.message(
+      'Edit your appointment',
+      name: 'edityourappointment',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

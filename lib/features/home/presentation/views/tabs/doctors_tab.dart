@@ -27,6 +27,7 @@ class DoctorsTab extends StatelessWidget {
                     .where((cat) => cat.category.id == categotyTab)
                     .toList();
         }
+        
         if (state is DoctorsFailureStates) {
           return CustomErrorWidget(errorMessage: state.failure.toString());
         }
@@ -62,7 +63,7 @@ class DoctorsTab extends StatelessWidget {
                     final doctorsSuccess = filteredDoctors[index];
                     return InkWell(
                       onTap: () {
-                       GoRouter.of(context).push(AppRouting.rDoctorDetails);
+                       GoRouter.of(context).push(AppRouting.rDoctorDetails,extra: doctorsSuccess.doctor.id);
                       },
                       child: DoctorsCardItem(
                         doctorImage: "${doctorsSuccess.doctor.image}",
